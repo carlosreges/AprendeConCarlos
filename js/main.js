@@ -124,4 +124,13 @@
             nav.style.background = 'rgba(0,0,0,0.3)';
         }
     });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true
+    });
 })(jQuery);
