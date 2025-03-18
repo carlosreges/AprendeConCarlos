@@ -1,24 +1,61 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
+    --primary: #224D73;    /* Color principal - azul oscuro */
+    --secondary: #EE3F60;  /* Color secundario - rojo */
+    --accent: #0DB6C5;     /* Color de acento - turquesa */
+    --highlight: #D96A6A;  /* Color de resalte - salmón */
     --light: #F0FBFC;
-    --dark: #181d38;
+    --dark: #224D73;       /* Cambiado para mantener consistencia */
+    
+    /* Nuevas variables para modo claro/oscuro */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-overlay: rgba(24, 29, 56, 0.7);
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --header-overlay: rgba(0, 0, 0, 0.8);
 }
 
 .fw-medium {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 
 .fw-semi-bold {
+    font-weight: 600 !important;
+}
+
+.fw-bold {
     font-weight: 700 !important;
 }
 
 .back-to-top {
-    position: fixed;
-    display: none;
-    right: 45px;
-    bottom: 45px;
-    z-index: 99;
+    position: fixed !important;
+    right: 30px !important;
+    left: auto !important; /* Forzar que no se posicione a la izquierda */
+    bottom: 30px !important;
+    z-index: 99999 !important; /* Aumentamos el z-index para asegurarnos que esté por encima */
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -39,12 +76,21 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-weight: 600;
     transition: .5s;
 }
 
-.btn.btn-primary,
+.btn.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
 .btn.btn-secondary {
     color: #FFFFFF;
 }
@@ -87,6 +133,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
+    font-family: 'Arimo', sans-serif;
     margin-right: 30px;
     padding: 25px 0;
     color: #FFFFFF;
@@ -97,7 +144,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 @media (max-width: 991.98px) {
@@ -152,8 +199,10 @@
 
 .navbar img.logo {
     margin-left: 20px;
-    width: 5%;
-    min-width: 50px;
+    width: 3%;
+    min-width: 40px;
+    height: auto;
+    padding: 5px;
 }
 
 
@@ -171,16 +220,93 @@
 }
 
 @media (max-width: 768px) {
-    .header-carousel .owl-carousel-item {
-        position: relative;
-        min-height: 300px;
+    /* Ajuste para títulos largos en el carrusel */
+    .carousel-content {
+        padding: 2rem 1.5rem !important;
+        width: 85% !important;
+        margin: 2rem auto !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
     }
-    
-    .header-carousel .owl-carousel-item img {
-        position: absolute;
-        width: 75%;
-        height: 75%;
-        object-fit: cover;
+
+    .carousel-content h1 {
+        font-size: 1.4rem !important;
+        line-height: 1.4 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin-bottom: 0.8rem !important;
+        word-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    .carousel-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        max-height: none !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Refinamiento del carrusel para texto visible */
+    .header-carousel .owl-carousel-item {
+        min-height: 450px !important; /* Aumentamos altura para más espacio */
+    }
+
+    .carousel-content h5 {
+        font-size: 1rem !important;
+        color: var(--primary) !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .carousel-content h1 {
+        font-size: 1.6rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+        overflow: visible !important;
+        height: auto !important;
+    }
+
+    .carousel-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+        overflow: visible !important;
+        height: auto !important;
+        display: block !important; /* Quitamos el límite de líneas */
+    }
+
+    /* Ajustamos los botones para que no se superpongan */
+    .carousel-content .btn {
+        margin: 0.5rem !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Estilo para los indicadores del carrusel */
+    .header-carousel .owl-dots {
+        position: absolute !important;
+        bottom: 20px !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .header-carousel .owl-dot {
+        display: inline-block !important;
+        margin: 0 5px !important;
+    }
+
+    .header-carousel .owl-dot span {
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: rgba(255, 255, 255, 0.5) !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .header-carousel .owl-dot.active span {
+        background: var(--primary) !important;
+        transform: scale(1.5) !important;
     }
 }
 
@@ -232,6 +358,7 @@
 
 /*** Section Title ***/
 .section-title {
+    font-family: 'Arimo', sans-serif;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -244,7 +371,7 @@
     height: 2px;
     top: 4px;
     left: -40px;
-    background: var(--primary);
+    background: var(--secondary);
     z-index: -1;
 }
 
@@ -255,7 +382,7 @@
     height: 2px;
     bottom: 5px;
     left: -60px;
-    background: var(--primary);
+    background: var(--secondary);
     z-index: -1;
 }
 
@@ -272,13 +399,15 @@
 
 /*** Service ***/
 .service-item {
-    background: var(--light);
-    transition: .5s;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-item:hover {
-    margin-top: -10px;
-    background: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-item * {
@@ -299,6 +428,14 @@
 .category a:hover img,
 .course-item:hover img {
     transform: scale(1.1);
+}
+
+.course-item {
+    border: 1px solid rgba(34, 77, 115, 0.1); /* var(--primary) con opacidad */
+}
+
+.course-item:hover .course-title {
+    color: var(--highlight);
 }
 
 
@@ -380,12 +517,26 @@
 }
 
 .testimonial-carousel .owl-dot.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 
 /*** Footer ***/
+.footer {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.container-fluid.bg-dark {
+    margin-bottom: 0 !important;
+}
+
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 35px;
@@ -401,7 +552,8 @@
 }
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .footer .btn.btn-link {
@@ -429,12 +581,6 @@
     box-shadow: none;
 }
 
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
 .footer .copyright a {
     color: var(--light);
 }
@@ -452,6 +598,1020 @@
 }
 
 .language-option.active {
+    background-color: var(--accent);
+    color: var(--light);
+}
+
+/* Modificaciones para elementos destacados */
+.text-primary {
+    color: var(--secondary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Modificaciones para enlaces */
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--highlight);
+}
+
+/* Modificaciones para el spinner */
+.spinner-border.text-primary {
+    color: var(--secondary) !important;
+}
+
+/* Modificaciones para el botón back-to-top */
+.back-to-top:hover {
+    background: var(--accent);
+}
+
+/* Modificaciones para elementos de formulario */
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(13, 182, 197, 0.25); /* var(--accent) con opacidad */
+}
+
+/* Actualización de fuentes */
+body {
+    font-family: 'Arimo', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+}
+
+/* About page specific styles */
+.about-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.service-item i {
+    transition: all 0.5s ease;
+}
+
+.service-item:hover i {
+    transform: scale(1.2) rotate(360deg);
+    color: var(--primary);
+}
+
+/* About page specific styles */
+.about-extended {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid var(--secondary);
+    margin: 20px 0;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.custom-list li {
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.custom-list li:hover {
+    transform: translateX(10px);
+    color: var(--primary);
+}
+
+.custom-list li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--secondary);
+}
+
+.about-extended p {
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+/* Animación para la imagen del perfil */
+.position-relative img {
+    transition: all 0.5s ease;
+}
+
+.position-relative:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para el botón de "¡Comencemos!" */
+.btn-primary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover::after {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    opacity: 0;
+}
+
+/* Animación para el formulario de contacto */
+.form-floating {
+    transition: all 0.3s ease;
+}
+
+.form-floating input:focus,
+.form-floating textarea:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación para los iconos de contacto */
+.bg-primary {
+    transition: all 0.3s ease;
+}
+
+.d-flex:hover .bg-primary {
+    transform: rotate(15deg);
+}
+
+/* Animación para el botón de enviar */
+.btn-primary[type="submit"] {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: all 0.5s ease;
+}
+
+.btn-primary[type="submit"]:hover::before {
+    left: 100%;
+}
+
+/* Animación para los campos del formulario al escribir */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.2);
+}
+
+/* Efecto hover para los enlaces sociales del footer */
+.btn-social {
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-5px) rotate(360deg);
     background-color: var(--primary);
-    color: #FFFFFF;
+    border-color: var(--primary);
+}
+
+/* Estilo para el botón de éxito */
+.btn-primary.success {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+.btn-primary.success:hover {
+    background-color: #157347 !important;
+    border-color: #146c43 !important;
+}
+
+/* Efecto typing para títulos principales */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid var(--primary);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    margin: 0 auto;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary) }
+}
+
+/* Micro-interacciones para el formulario */
+.form-floating input:valid,
+.form-floating textarea:valid {
+    border-color: #198754;
+    background-color: rgba(25, 135, 84, 0.05);
+}
+
+.form-floating input:valid + label,
+.form-floating textarea:valid + label {
+    color: #198754;
+}
+
+/* Transiciones suaves entre páginas */
+.fade-transition {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-transition.show {
+    opacity: 1;
+}
+
+/* Optimización para móviles */
+@media (max-width: 768px) {
+    .service-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .btn-social:hover {
+        transform: translateY(-3px) rotate(180deg);
+    }
+
+    /* Reorganización del navbar */
+    .navbar {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        max-width: 70% !important;
+    }
+
+    .navbar img.logo {
+        width: 35px !important;
+        margin: 0 10px 0 0 !important;
+    }
+
+    .navbar-brand h2 {
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .navbar-toggler {
+        padding: 4px 8px !important;
+        margin: 0 0 0 auto !important;
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    /* Ajuste del contenedor del navbar */
+    .navbar > .container, 
+    .navbar > .container-fluid {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Mejoras para el menú desplegable */
+    .navbar-collapse {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1) !important;
+        padding: 1rem !important;
+        z-index: 1000 !important;
+    }
+
+    .navbar-nav {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-item {
+        padding: 0.5rem 0 !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Ajuste del dropdown dentro del menú móvil */
+    .dropdown-menu {
+        border: none !important;
+        background: #f8f9fa !important;
+        padding: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1rem !important;
+    }
+
+    /* Ajustes específicos para el dropdown de idiomas */
+    .nav-item.dropdown {
+        position: static !important;
+    }
+
+    .dropdown-menu {
+        width: 100% !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background-color: #f8f9fa !important;
+    }
+
+    .dropdown-menu.fade-down {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .language-option {
+        padding: 0.75rem 1.5rem !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    }
+
+    .language-option:last-child {
+        border-bottom: none !important;
+    }
+
+    .language-option.active {
+        background-color: var(--accent) !important;
+        color: white !important;
+    }
+}
+
+/* Mejoras para diseño responsivo */
+@media (max-width: 768px) {
+    /* Ajuste del navbar en móviles */
+    .navbar-brand h2 {
+        font-size: 1.2rem;
+    }
+    
+    .logo {
+        width: 40px !important;
+    }
+
+    /* Ajuste de títulos en móviles */
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    /* Mejora de espaciado en secciones */
+    .container-xxl {
+        padding: 3rem 1rem;
+    }
+
+    /* Ajuste de cards de servicios */
+    .service-item {
+        margin-bottom: 1rem;
+    }
+
+    /* Mejora de formulario de contacto */
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste del footer */
+    .footer-menu {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    /* Ajuste de botones */
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Corrección del header */
+    .page-header {
+        padding: 2rem 0;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-header .container {
+        padding: 0 15px;
+    }
+
+    .page-header .display-3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste del breadcrumb */
+    .breadcrumb {
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Ajustes específicos para móviles muy pequeños */
+@media (max-width: 320px) {
+    .navbar-brand h2 {
+        font-size: 1rem;
+    }
+    
+    .display-3 {
+        font-size: 2rem;
+    }
+}
+
+/* Ajustes específicos para tablets */
+@media (min-width: 769px) and (max-width: 991px) {
+    .carousel-content h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Animación para los dots */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.8); }
+    100% { transform: scale(1.5); }
+}
+
+.owl-dot.bounce span {
+    animation: bounce 0.3s ease;
+}
+
+/* Estilos para el Quiz de Autoevaluación */
+.question-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.question-card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.question-text {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.option-item {
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.option-item:hover {
+    background-color: #f8f9fa;
+}
+
+.option-item input[type="radio"] {
+    margin-right: 10px;
+}
+
+.audio-container {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.audio-container audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.transcription-text {
+    font-style: italic;
+    color: #666;
+    padding: 10px;
+    background-color: #fff;
+    border-left: 3px solid var(--accent);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: var(--accent);
+}
+
+.results-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.score-container {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.answer-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.answer-item:hover {
+    transform: translateX(5px);
+}
+
+.bg-light-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+#quizIntro {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#startQuizBtn {
+    transition: all 0.3s ease;
+}
+
+#startQuizBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.language-section h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.language-section h4:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: var(--accent);
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+/* Aplicar variables */
+.card, .service-item, .course-item, .team-item, .testimonial-text {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.navbar, .footer {
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .navbar-light .navbar-brand h2 {
+    color: var(--accent);
+}
+
+[data-theme="dark"] .owl-carousel-item .position-absolute {
+    background: var(--header-overlay);
+}
+
+[data-theme="dark"] .section-title::before,
+[data-theme="dark"] .section-title::after {
+    background: var(--accent);
+}
+
+/* Botón de cambio de tema */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: .4s;
+}
+
+.slider .sun-icon {
+    left: 8px;
+    color: #f1c40f;
+    opacity: 1;
+}
+
+.slider .moon-icon {
+    right: 8px;
+    color: #f1f1f1;
+    opacity: 0;
+}
+
+input:checked + .slider .sun-icon {
+    opacity: 0;
+}
+
+input:checked + .slider .moon-icon {
+    opacity: 1;
+}
+
+/* Ajustes para títulos en modo oscuro */
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+    color: #f0f0f0;
+}
+
+/* Ajuste específico para los títulos de sección */
+[data-theme="dark"] .section-title {
+    background-color: var(--card-bg) !important; /* Fondo oscuro en lugar de blanco */
+    color: var(--accent) !important; /* Color de acento para mejor visibilidad */
+}
+
+/* Ajuste para los títulos principales de sección */
+[data-theme="dark"] .mb-5 {
+    color: #f0f0f0 !important;
+}
+
+/* Ajustes para elementos específicos en modo oscuro */
+[data-theme="dark"] .text-center h1,
+[data-theme="dark"] .text-start h1,
+[data-theme="dark"] .text-end h1 {
+    color: #f0f0f0 !important;
+}
+
+/* Ajustes para tarjetas y elementos de contenido */
+[data-theme="dark"] .service-item,
+[data-theme="dark"] .course-item,
+[data-theme="dark"] .team-item {
+    background-color: #2a2a2a !important;
+    border-color: #333 !important;
+}
+
+[data-theme="dark"] .service-item h5,
+[data-theme="dark"] .course-item h5,
+[data-theme="dark"] .team-item h5 {
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .service-item p,
+[data-theme="dark"] .course-item p,
+[data-theme="dark"] .team-item p {
+    color: #d0d0d0 !important;
+}
+
+/* Ajustes para las categorías */
+[data-theme="dark"] .category .bg-white {
+    background-color: rgba(42, 42, 42, 0.9) !important;
+}
+
+[data-theme="dark"] .category h5.m-0 {
+    color: #f0f0f0 !important;
+}
+
+/* Ajustes para el formulario de contacto */
+[data-theme="dark"] .form-control {
+    background-color: #333 !important;
+    border-color: #444 !important;
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 182, 197, 0.25) !important;
+}
+
+[data-theme="dark"] .form-floating label {
+    color: #aaa !important;
+}
+
+[data-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--accent) !important;
+}
+
+/* Ajustes para el carrusel */
+[data-theme="dark"] .owl-carousel .owl-nav button {
+    border-color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .owl-carousel .owl-nav button:hover {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Transición suave para todos los elementos */
+body, h1, h2, h3, h4, h5, h6, p, div, section, article, aside, footer, header, nav, 
+.card, .service-item, .course-item, .team-item, .form-control, .btn, .navbar, .footer {
+    transition: all 0.3s ease !important;
+}
+
+/* Estilos para el modo oscuro en la página de examen */
+body.dark-mode .quiz-container,
+body.dark-mode .question,
+body.dark-mode .options-container,
+body.dark-mode .quiz-intro,
+body.dark-mode .result-container {
+    background-color: #343a40;
+    color: #f0f0f0;
+}
+
+body.dark-mode .option {
+    background-color: #2c3136;
+    color: #f0f0f0;
+    border: 1px solid #495057;
+}
+
+body.dark-mode .option:hover {
+    background-color: #495057;
+}
+
+body.dark-mode .selected-option {
+    background-color: #0d6efd;
+    color: white;
+}
+
+body.dark-mode .correct-option {
+    background-color: #198754;
+    color: white;
+}
+
+body.dark-mode .wrong-option {
+    background-color: #dc3545;
+    color: white;
+}
+
+body.dark-mode .btn-quiz {
+    background-color: #0d6efd;
+    color: white;
+}
+
+body.dark-mode .btn-quiz:hover {
+    background-color: #0b5ed7;
+}
+
+body.dark-mode .quiz-intro {
+    border: 1px solid #495057;
+}
+
+body.dark-mode .result-container {
+    border: 1px solid #495057;
+}
+
+/* Estilos específicos para el modo oscuro en el quiz */
+body.dark-mode #quizContainer,
+body.dark-mode .question-container,
+body.dark-mode .options-container,
+body.dark-mode .option,
+body.dark-mode .quiz-intro,
+body.dark-mode .result-container {
+    background-color: #343a40 !important;
+    color: #f0f0f0 !important;
+    border-color: #495057 !important;
+}
+
+body.dark-mode .question {
+    color: #f0f0f0 !important;
+    background-color: #343a40 !important;
+}
+
+body.dark-mode .option {
+    background-color: #2c3136 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #495057 !important;
+}
+
+body.dark-mode .option:hover {
+    background-color: #495057 !important;
+}
+
+body.dark-mode .quiz-navigation button {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-color: #0d6efd !important;
+}
+
+body.dark-mode .quiz-navigation button:hover {
+    background-color: #0b5ed7 !important;
+}
+
+body.dark-mode .quiz-container {
+    background-color: #343a40 !important;
+    border-color: #495057 !important;
+}
+
+/* Asegurar que no haya elementos con fondo blanco persistente */
+body.dark-mode *[style*="background-color: white"],
+body.dark-mode *[style*="background-color: #fff"],
+body.dark-mode *[style*="background-color: #ffffff"],
+body.dark-mode *[style*="background: white"],
+body.dark-mode *[style*="background: #fff"] {
+    background-color: #343a40 !important;
+    background: #343a40 !important;
+}
+
+/* Estilos específicos para el modo oscuro en el quiz */
+body.dark-mode .question-card {
+    background-color: #343a40 !important;
+    color: #f0f0f0 !important;
+    border-color: #495057 !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .question-card p,
+body.dark-mode .question-card h3,
+body.dark-mode .question-card h4,
+body.dark-mode .question-card h5,
+body.dark-mode .question-card label {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .question-card .form-check-input {
+    background-color: #2c3136;
+    border-color: #495057;
+}
+
+body.dark-mode .question-card .form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* También ajustamos cualquier elemento interno con fondo blanco */
+body.dark-mode .question-card .bg-white,
+body.dark-mode .question-card [class*="bg-light"] {
+    background-color: #2c3136 !important;
+}
+
+/* Estilos específicos para el contenedor principal del quiz en modo oscuro */
+body.dark-mode #quizContainer,
+body.dark-mode .quiz-container {
+    background-color: #343a40 !important;
+    color: #f0f0f0 !important;
+    border-color: #495057 !important;
+}
+
+/* Aseguramos que todas las tarjetas de preguntas dentro del contenedor también cambien */
+body.dark-mode #quizContainer .question-card,
+body.dark-mode .quiz-container .question-card {
+    background-color: #2c3136 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #495057 !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Para todos los textos dentro del contenedor */
+body.dark-mode #quizContainer *,
+body.dark-mode .quiz-container * {
+    color: #f0f0f0 !important;
+}
+
+/* Excepciones para botones y elementos con clases específicas */
+body.dark-mode #quizContainer .btn-primary,
+body.dark-mode .quiz-container .btn-primary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: white !important;
+}
+
+body.dark-mode #quizContainer .btn-secondary,
+body.dark-mode .quiz-container .btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: white !important;
+}
+
+/* Para las opciones seleccionadas */
+body.dark-mode #quizContainer .selected-option,
+body.dark-mode .quiz-container .selected-option {
+    background-color: var(--accent) !important;
+    color: white !important;
 }

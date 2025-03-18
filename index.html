@@ -10,13 +10,10 @@
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link
@@ -55,9 +52,7 @@
     </div>
     <!-- Spinner End -->
     <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
-    >
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
       <img src="images/logoApCarlos.png" alt="logo" class="logo" />
       <a
         href="index.html"
@@ -75,9 +70,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="index.html" class="nav-item nav-link active" data-i18n="nav.home">Home</a>
+          <a href="index.html" class="nav-item nav-link" data-i18n="nav.home">Home</a>
           <a href="about.html" class="nav-item nav-link" data-i18n="nav.about">Sobre mí</a>
+          <a href="exam.html" class="nav-item nav-link" data-i18n="nav.exam">Autoevaluación</a>
           <a href="blog.html" class="nav-item nav-link" data-i18n="nav.blog">Blog</a>
+          <a href="contact.html" class="nav-item nav-link" data-i18n="nav.contact">Contacto</a>
+          
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="nav.languages">Idiomas</a>
             <div class="dropdown-menu fade-down m-0">
@@ -86,7 +84,17 @@
               <a href="#" class="dropdown-item language-option" data-lang="pt" onclick="changeLanguage('pt')">Português</a>
             </div>
           </div>
-          <!-- <a href="contact.html" class="nav-item nav-link">Contacto</a> -->
+          
+          <!-- Botón de cambio de tema -->
+          <div class="theme-switch-wrapper nav-item">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider">
+                <i class="fas fa-sun sun-icon icon"></i>
+                <i class="fas fa-moon moon-icon icon"></i>
+              </div>
+            </label>
+          </div>
         </div>
         <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join">
           Únete ahora<i class="fa fa-arrow-right ms-3"></i>
@@ -94,6 +102,8 @@
       </div>
     </nav>
     <!-- Navbar End -->
+
+    
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
@@ -109,31 +119,24 @@
                 <div class="col-sm-10 col-lg-8">
                   <h5
                     class="text-primary text-uppercase mb-3 animated slideInDown"
-                  >
-                    Conversaciones en vivo con un profesor nativo
-                  </h5>
-                  <h1 class="display-3 text-white animated slideInDown">
-                    Aprende español ahora
-                  </h1>
+                    data-i18n="carousel.title1"
+                  ></h5>
+                  <h1 class="display-3 text-white animated slideInDown" data-i18n="carousel.heading"></h1>
+                  <p class="fs-5 text-white mb-4 pb-2" data-i18n="carousel.text"></p>
                   <p class="fs-5 text-white mb-4 pb-2">
-                    Explora el fascinante mundo del idioma español! Desde principiantes hasta avanzados, ofrecemos lecciones diseñadas para ti. Sumérgete en la cultura latinoamericana y desata tu potencial lingüístico.
-                  </p>
-                  <p class="fs-5 text-white mb-4 pb-2">
-                    <strong
-                      >Habla, lee y escucha de una manera divertida y
-                      efectiva
-                      hoy!</strong
-                    >
+                    <strong data-i18n="carousel.highlight"></strong>
                   </p>
                   <a
                     href=""
                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    >Más información</a
+                    data-i18n="carousel.button1"
+                  ></a
                   >
                   <a
                     href=""
                     class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                      >Únete ahora</a
+                    data-i18n="carousel.button2"
+                  ></a
                   >
                 </div>
               </div>
@@ -196,10 +199,8 @@
             <div class="service-item text-center pt-3">
               <div class="p-4">
                 <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                <h5 class="mb-3">Lectura interesante</h5>
-                <p>
-                  Historias interesantes y cortas de todo Latinoamérica para practicar tu lectura.
-                </p>
+                <h5 class="mb-3" data-i18n="services.reading.title"></h5>
+                <p data-i18n="services.reading.text"></p>
               </div>
             </div>
           </div>
@@ -207,10 +208,8 @@
             <div class="service-item text-center pt-3">
               <div class="p-4">
                 <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                <h5 class="mb-3">Clases en línea</h5>
-                <p>
-                  Clases en línea para que puedas conectarte desde la comodidad de tu hogar y aprender a tu propio ritmo.
-                </p>
+                <h5 class="mb-3" data-i18n="services.online.title"></h5>
+                <p data-i18n="services.online.text"></p>
               </div>
             </div>
           </div>
@@ -218,10 +217,8 @@
             <div class="service-item text-center pt-3">
               <div class="p-4">
                 <i class="fa fa-3x fa-globe-americas text-primary mb-4"></i>
-                <h5 class="mb-3">Interculturalidad</h5>
-                <p>
-                  Aprende español a través de la cultura hispánica, su gastronomía y sus costumbres. Desde México hasta Argentina.
-                </p>
+                <h5 class="mb-3" data-i18n="services.culture.title"></h5>
+                <p data-i18n="services.culture.text"></p>
               </div>
             </div>
           </div>
@@ -229,10 +226,8 @@
             <div class="service-item text-center pt-3">
               <div class="p-4">
                 <i class="fa fa-3x bi-music-note-beamed text-primary mb-4"></i>
-                <h5 class="mb-3">Canciones en español</h5>
-                <p>
-                  No hay mejor manera de aprender que a través de sus canciones. Estudiás con diversos estilos musicales.
-                </p>
+                <h5 class="mb-3" data-i18n="services.music.title"></h5>
+                <p data-i18n="services.music.text"></p>
               </div>
             </div>
           </div>
@@ -260,27 +255,20 @@
             </div>
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <h6 class="section-title bg-white text-start text-primary pe-3">
-              Sobre mí
-            </h6>
-            <h1 class="mb-4">¿Quién soy yo?</h1>
-            <p class="mb-4">
-              Me llamo Carlos Reges, soy profesor de Lengua Española y Literatura. He sido docente por más de 15 años y deseo enseñarte mi idioma a través de ejercicios prácticos, conversaciones amenas y otras actividades que te ayudarán a aprender y mejorar tu aprendizaje.
-            </p>
-            <p class="mb-4">
-              My name is Carlos Reges, and I'm a teacher of Spanish Language and Literature. I've been an educator for more than 15 years, and I want to teach you my language through practical exercises, enjoyable conversations, and other activities that will help you learn and improve your learning.
-            </p>
+            <h6 class="section-title bg-white text-start text-primary pe-3" data-i18n="about.title"></h6>
+            <h1 class="mb-4" data-i18n="about.question"></h1>
+            <p class="mb-4" data-i18n="about.text1"></p>
             <div class="row gy-2 gx-4 mb-4">
               <div class="col-sm-6">
                 <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2">
-                  </i>Profesor de Lengua
+                  <i class="fa fa-arrow-right text-primary me-2"></i>
+                  <span data-i18n="about.skill1"></span>
                 </p>
               </div>
               <div class="col-sm-6">
                 <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2">
-                </i>Amante de la lectura
+                  <i class="fa fa-arrow-right text-primary me-2"></i>
+                  <span data-i18n="about.skill2"></span>
                 </p>
               </div>
               <div class="col-sm-6">
@@ -308,7 +296,7 @@
                 </p>
               </div>
             </div>
-            <a class="btn btn-primary py-3 px-5 mt-2" href="">Más sobre mí</a>
+            <a class="btn btn-primary py-3 px-5 mt-2" href="" data-i18n="about.button"></a>
           </div>
         </div>
       </div>
@@ -317,88 +305,60 @@
 
     <!-- Categories Start -->
     <div class="container-xxl py-5 category">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Actividades
-          </h6>
-          <h1 class="mb-5">¿Cómo aprenderás español?</h1>
-        </div>
-        <div class="row g-3">
-          <div class="col-lg-7 col-md-6">
-            <div class="row g-3">
-              <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-1.jpg" alt="" />
-                  <div
-                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                    style="margin: 1px"
-                  >
-                    <h5 class="m-0">Libros y relatos cortos</h5>
-                    <!-- <small class="text-primary">49 Courses</small> -->
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-2.jpg" alt="" />
-                  <div
-                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                    style="margin: 1px"
-                  >
-                    <h5 class="m-0">Conversaciones en vivo</h5>
-                    <!-- <small class="text-primary">49 Courses</small> -->
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-3.jpg" alt="" />
-                  <div
-                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                    style="margin: 1px"
-                  >
-                    <h5 class="m-0">Ejercicios interactivos</h5>
-                    <!-- <small class="text-primary">49 Courses</small> -->
-                  </div>
-                </a>
-              </div>
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="categories.title"></h6>
+                <h1 class="mb-5" data-i18n="categories.heading"></h1>
             </div>
-          </div>
-          <div
-            class="col-lg-5 col-md-6 wow zoomIn"
-            data-wow-delay="0.7s"
-            style="min-height: 350px"
-          >
-            <a class="position-relative d-block h-100 overflow-hidden" href="">
-              <img
-                class="img-fluid position-absolute w-100 h-100"
-                src="img/cat-4.jpg"
-                alt=""
-                style="object-fit: cover"
-              />
-              <div
-                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                style="margin: 1px"
-              >
-                <h5 class="m-0">Videos tutoriales</h5>
-                <!-- <small class="text-primary">49 Courses</small> -->
-              </div>
-            </a>
-          </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-1.jpg" alt="" />
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px">
+                                    <h5 class="m-0" data-i18n="categories.item1"></h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-2.jpg" alt="" />
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px">
+                                    <h5 class="m-0" data-i18n="categories.item2">Conversaciones en vivo</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-3.jpg" alt="" />
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px">
+                                    <h5 class="m-0" data-i18n="categories.item3">Ejercicios interactivos</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover" />
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px">
+                            <h5 class="m-0" data-i18n="categories.item4">Videos tutoriales</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Categories Start -->
+    <!-- Categories End -->
 
     <!-- Courses Start -->
     <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Diferentes niveles
+          <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="courses.title">
           </h6>
-          <h1 class="mb-5">Categoría de cursos</h1>
+          <h1 class="mb-5" data-i18n="courses.heading"></h1>
         </div>
         <div class="row g-4 justify-content-center">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -412,41 +372,32 @@
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                     style="border-radius: 30px 0 0 30px"
-                    >Más información</a
+                    data-i18n="courses.more"
+                  ></a
                   >
                   <a
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3"
                     style="border-radius: 0 30px 30px 0"
-                    >Únete ahora</a
+                    data-i18n="courses.join"
+                  ></a
                   >
                 </div>
               </div>
               <div class="text-center p-4 pb-0">
                 <h3 class="mb-0">$150.00</h3>
-                <!-- <div class="mb-3">
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small>(123)</small>
-                </div> -->
-                <h5 class="mb-4">
-                  Español para Principiantes <br> (A1-A2)
-                </h5>
+                <h5 class="mb-4" data-i18n="courses.beginner"></h5>
               </div>
               <div class="d-flex border-top">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-user-tie text-primary me-2"></i>John
-                  Doe</small
+                  ><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small
                 >
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
                 >
                 <small class="flex-fill text-center py-2"
                   ><i class="fa fa-user text-primary me-2"></i>30
-                  Alumnos</small
+                  <span data-i18n="courses.students"></span></small
                 >
               </div>
             </div>
@@ -462,41 +413,32 @@
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                     style="border-radius: 30px 0 0 30px"
-                    >Más información</a
+                    data-i18n="courses.more"
+                  ></a
                   >
                   <a
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3"
                     style="border-radius: 0 30px 30px 0"
-                    >Únete ahora</a
+                    data-i18n="courses.join"
+                  ></a
                   >
                 </div>
               </div>
               <div class="text-center p-4 pb-0">
                 <h3 class="mb-0">$150.00</h3>
-                <!-- <div class="mb-3">
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small>(123)</small>
-                </div> -->
-                <h5 class="mb-4">
-                  Español Intermedio <br> Intermediate (B1-B2)
-                </h5>
+                <h5 class="mb-4" data-i18n="courses.intermediate"></h5>
               </div>
               <div class="d-flex border-top">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-user-tie text-primary me-2"></i>John
-                  Doe</small
+                  ><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small
                 >
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
                 >
                 <small class="flex-fill text-center py-2"
                   ><i class="fa fa-user text-primary me-2"></i>30
-                  Students</small
+                  <span data-i18n="courses.students"></span></small
                 >
               </div>
             </div>
@@ -512,41 +454,32 @@
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                     style="border-radius: 30px 0 0 30px"
-                    >Más información</a
+                    data-i18n="courses.more"
+                  ></a
                   >
                   <a
                     href="#"
                     class="flex-shrink-0 btn btn-sm btn-primary px-3"
                     style="border-radius: 0 30px 30px 0"
-                    >Únete ahora</a
+                    data-i18n="courses.join"
+                  ></a
                   >
                 </div>
               </div>
               <div class="text-center p-4 pb-0">
                 <h3 class="mb-0">$150.00</h3>
-                <!-- <div class="mb-3">
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small>(123)</small>
-                </div> -->
-                <h5 class="mb-4">
-                  Español Avanzado <br> Advanced (C1)
-                </h5>
+                <h5 class="mb-4" data-i18n="courses.advanced"></h5>
               </div>
               <div class="d-flex border-top">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-user-tie text-primary me-2"></i>John
-                  Doe</small
+                  ><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small
                 >
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
                 >
                 <small class="flex-fill text-center py-2"
                   ><i class="fa fa-user text-primary me-2"></i>30
-                  Students</small
+                  <span data-i18n="courses.students"></span></small
                 >
               </div>
             </div>
@@ -758,14 +691,11 @@
     <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Contact me
-          </h6>
-          <h1 class="mb-5">Realiza tu consulta</h1>
+          <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="contact.title"></h6>
+          <h1 class="mb-5" data-i18n="contact.heading"></h1>
         </div>
         <div class="row g-4">
           <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <!-- <h5>Get In Touch</h5> -->
             <div class="d-flex align-items-center mb-3">
               <div
                 class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
@@ -774,7 +704,7 @@
                 <i class="fa fa-map-marker-alt text-white"></i>
               </div>
               <div class="ms-3">
-                <h5 class="text-primary">Ubicación</h5>
+                <h5 class="text-primary" data-i18n="contact.location"></h5>
                 <p class="mb-0">Córdoba, Argentina</p>
               </div>
             </div>
@@ -786,8 +716,9 @@
                 <i class="fa fa-phone-alt text-white"></i>
               </div>
               <div class="ms-3">
+                <a href="tel:+5493513400891">
                 <h5 class="text-primary">Teléfono</h5>
-                <p class="mb-0">+54 9 351 3400891</p>
+                </a>
               </div>
             </div>
             <div class="d-flex align-items-center">
@@ -798,36 +729,21 @@
                 <i class="fa fa-envelope-open text-white"></i>
               </div>
               <div class="ms-3">
-                <h5 class="text-primary">Email</h5>
                 <a href="mailto:profecorrige@gmail.com" class="mb-0"
-                  >profecorrige@gmail.com</a
+                  >
+                <h5 class="text-primary">Email</h5>
+                </a
                 >
               </div>
             </div>
           </div>
-          <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <iframe
-              class="position-relative rounded w-100 h-100"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-              frameborder="0"
-              style="min-height: 300px; border: 0"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          </div> -->
           <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-            <form method="post" action="contact.php">
+            <form>
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                    <label for="name">Tu nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" />
+                    <label for="name" data-i18n="contact.name"></label>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -877,137 +793,58 @@
     <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-4 col-md-6">
-            <h4 class="text-white mb-3">Enlaces importantes</h4>
-            <a class="btn btn-link" href="/blog.html">Blog</a>
-            <a class="btn btn-link" href="">Fundeú</a>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <h4 class="text-white mb-3">Contact</h4>
-            <!-- <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+012 345 67890
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>info@example.com
-            </p> -->
-            <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Primera columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.links">Enlaces importantes</h4>
+                    <a class="btn btn-link" href="/blog.html">Blog</a>
+                    <a class="btn btn-link" href="https://www.fundeu.es/" target="_blank">Fundeú</a>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Segunda columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.contact">Contacto</h4>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>Córdoba, Argentina
+                    </p>
+                    <p class="mb-2" data-i18n="footer.inquiry">
+                        Para consultas, por favor utiliza el formulario de contacto arriba.
+                    </p>
+                </div>
             </div>
-          </div>
-          <!-- <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Gallery</h4>
-            <div class="row g-2 pt-2">
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light p-1"
-                  src="img/course-1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div> -->
-          <div class="col-lg-4 col-md-6">
-            <h4 class="text-white mb-3">Newsletter</h4>
-            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input
-                class="form-control border-0 w-100 py-3 ps-4 pe-5"
-                type="text"
-                placeholder="Your email"
-              />
-              <button
-                type="button"
-                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-              >
-                SignUp
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">Aprende con Carlos</a>,
-              All Right Reserved. Diseñado por
-              <a class="border-bottom" href="https://carlosreges.com.ar"
-                >Carlos Reges</a
-              ><br /><br />
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Aprende con Carlos</a>
+                        <span data-i18n="footer.rights">Todos los derechos reservados</span>.
+                        <span data-i18n="footer.designed">Diseñado por</span>
+                        <a class="border-bottom" href="https://carlosreges.com.ar">Carlos Reges</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html" data-i18n="nav.home">Home</a>
+                            <a href="#" data-i18n="footer.cookies">Cookies</a>
+                            <a href="#" data-i18n="footer.help">Ayuda</a>
+                            <a href="#" data-i18n="footer.faqs">FAQs</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-              <div class="footer-menu">
-                <a href="">Home</a>
-                <a href="">Cookies</a>
-                <a href="">Help</a>
-                <a href="">FQAs</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1020,5 +857,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
