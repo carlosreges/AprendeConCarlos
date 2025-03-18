@@ -1,11 +1,11 @@
 window.quizQuestions = [
     {
-        question: "¿Cuál es el tiempo verbal en la oración 'Yo estudio español'?",
+        question: "Hola, Julio. ¿Cómo _____ esta mañana?",
         options: [
-            "Pretérito indefinido",
-            "Presente de indicativo",
-            "Pretérito imperfecto",
-            "Futuro simple"
+            "te sentirías",
+            "te encuentras",
+            "saldrían",
+            "contaría"
         ],
         correct: 1
     },
@@ -63,7 +63,7 @@ window.quizQuestions = [
     },
     {
         question: "La chica con la cámara está sonriendo. ¿Qué expresión usarías para describir su estado de ánimo?",
-        image: "path/to/camera.png",
+        image: "img/quiz/camera.png",
         options: [
             "Está que no cabe en sí de gozo",
             "Está como pez en el agua",
@@ -75,7 +75,7 @@ window.quizQuestions = [
     },
     {
         question: "En el aeropuerto, ¿qué situación refleja la imagen?",
-        image: "path/to/airport.png",
+        image: "img/quiz/airport.png",
         options: [
             "El pasajero está haciendo el check-in",
             "La azafata está dando indicaciones sobre la puerta de embarque",
@@ -87,7 +87,7 @@ window.quizQuestions = [
     },
     {
         question: "En el pueblo andino, los turistas probablemente están...",
-        image: "path/to/tourists.pngg",
+        image: "img/quiz/tourists.png",
         options: [
             "Preguntando por direcciones al centro",
             "Regateando el precio de las artesanías",
@@ -99,7 +99,7 @@ window.quizQuestions = [
     },
     {
         question: "En el tren, ¿qué detalle NO corresponde con la imagen?",
-        image: "path/to/train.png",
+        image: "img/quiz/train.png",
         options: [
             "Hay tres pasajeros en el vagón",
             "Dos personas están despiertas",
@@ -111,7 +111,7 @@ window.quizQuestions = [
     },
     {
         question: "Sobre la imagen del gato, elige la descripción que utiliza correctamente los marcadores espaciales:",
-        image: "path/to/cat.png",
+        image: "img/quiz/cat.png",
         options: [
             "El gato está acostado sobre la alfombra, entre la cama y el escritorio, mientras las lámparas iluminan el cuarto",
             "El gato está en la alfombra, la cama está al lado del escritorio y hay lámparas",
@@ -409,7 +409,7 @@ function fixImagePaths() {
 document.addEventListener('DOMContentLoaded', fixImagePaths);
 
 // Función específica para arreglar las imágenes problemáticas
-function fixSpecificImages() {
+/*function fixSpecificImages() {
     if (!window.quizQuestions) return;
     
     // Mapeo de rutas problemáticas a rutas correctas
@@ -445,7 +445,7 @@ function fixSpecificImages() {
             img.src = question.image;
         }
     });
-}
+}*/
 
 // Llamar a esta función al cargar la página
 document.addEventListener('DOMContentLoaded', fixSpecificImages);

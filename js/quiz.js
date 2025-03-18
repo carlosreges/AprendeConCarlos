@@ -269,6 +269,12 @@ class Quiz {
         if (question.audio) {
             this.setupAudioControls();
         }
+        
+        if (window.darkModeManager) {
+            setTimeout(() => {
+                window.darkModeManager.enforceCardStyles();
+            }, 50);
+        }
     }
 
     nextQuestion() {
@@ -681,18 +687,49 @@ class Quiz {
         }
     }
 
-    // Método para mostrar advertencias
+    // Actualizar método showWarning
     showWarning(message) {
+        console.log("⚠️ Mostrando advertencia:", message);
+        
         // Eliminar advertencias anteriores
         const oldWarnings = document.querySelectorAll('.quiz-warning');
         oldWarnings.forEach(w => w.remove());
         
-        // Crear elemento de advertencia
+        // Crear elemento de advertencia con estilos inline para asegurar su apariencia
         const warningEl = document.createElement('div');
         warningEl.className = 'quiz-warning';
+        
+        // Determinar si estamos en modo oscuro
+        const isDarkMode = document.body.classList.contains('dark-mode') || 
+                           document.body.getAttribute('data-theme') === 'dark';
+        
+        // Aplicar estilos inline directamente
+        warningEl.style.position = 'relative';
+        warningEl.style.maxWidth = '800px';
+        warningEl.style.margin = '0 auto 15px auto';
+        warningEl.style.transform = 'translateY(-20px)';
+        warningEl.style.opacity = '0';
+        warningEl.style.transition = 'all 0.3s ease';
+        warningEl.style.zIndex = '100';
+        
+        // Crear el contenido con estilos inline
         warningEl.innerHTML = `
-            <div class="warning-container">
-                <i class="fas fa-exclamation-triangle"></i>
+            <div class="warning-container" style="
+                background-color: ${isDarkMode ? '#3e1c20' : '#f8d7da'} !important;
+                color: ${isDarkMode ? '#f8d7da' : '#721c24'} !important;
+                padding: 12px 20px !important;
+                border-radius: 8px !important;
+                border-left: 5px solid #dc3545 !important;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+                font-weight: 500 !important;
+                display: flex !important;
+                align-items: center !important;
+            ">
+                <i class="fas fa-exclamation-triangle" style="
+                    font-size: 1.2em !important;
+                    margin-right: 10px !important;
+                    color: #dc3545 !important;
+                "></i>
                 ${message}
             </div>
         `;
@@ -704,18 +741,44 @@ class Quiz {
             
             // Animar entrada
             setTimeout(() => {
-                warningEl.classList.add('show');
+                warningEl.style.transform = 'translateY(0)';
+                warningEl.style.opacity = '1';
+                
+                // Agregar animación de sacudida
+                const warningContainer = warningEl.querySelector('.warning-container');
+                if (warningContainer) {
+                    warningContainer.style.animation = 'shake 0.5s linear';
+                }
             }, 10);
             
             // Remover después de un tiempo
             setTimeout(() => {
-                warningEl.classList.remove('show');
+                warningEl.style.transform = 'translateY(-20px)';
+                warningEl.style.opacity = '0';
                 setTimeout(() => {
                     if (warningEl.parentNode) {
                         warningEl.parentNode.removeChild(warningEl);
                     }
                 }, 300);
             }, 4000);
+        }
+        
+        // Asegurar que la animación shake está definida
+        let styleEl = document.getElementById('quiz-custom-styles');
+        if (!styleEl) {
+            styleEl = document.createElement('style');
+            styleEl.id = 'quiz-custom-styles';
+            document.head.appendChild(styleEl);
+        }
+        
+        if (!styleEl.textContent.includes('@keyframes shake')) {
+            styleEl.textContent += `
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                    20%, 40%, 60%, 80% { transform: translateX(5px); }
+                }
+            `;
         }
         
         // Reproducir sonido de advertencia (opcional)

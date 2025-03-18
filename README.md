@@ -22,19 +22,19 @@ Este es el repositorio del sitio web "Aprende con Carlos", una plataforma para l
 - [x] Implementar footer consistente en `contact.html`
 
 ### 3. Implementación del selector de tema (Dark/Light Mode)
-- [ ] Agregar botón de cambio de tema en el navbar de todas las páginas
-- [ ] Implementar estilos CSS para el modo oscuro
-- [ ] Asegurar que los títulos h1 en modo oscuro tengan color #f0f0f0
-- [ ] Corregir el fondo de los títulos h6 en modo oscuro
-- [ ] Verificar transiciones suaves entre temas
+- [x] Agregar botón de cambio de tema en el navbar de todas las páginas
+- [x] Implementar estilos CSS para el modo oscuro
+- [x] Asegurar que los títulos h1 en modo oscuro tengan color #f0f0f0
+- [x] Corregir el fondo de los títulos h6 en modo oscuro
+- [x] Verificar transiciones suaves entre temas
 
 ### 4. Página de Examen (Quiz)
-- [ ] Crear estructura básica de `exam.html`
-- [ ] Implementar funcionalidad de quiz en JavaScript
-- [ ] Agregar introducción bilingüe
-- [ ] Asegurar que las preguntas se carguen correctamente
-- [ ] Implementar sistema de resultados
-- [ ] Verificar compatibilidad con el sistema de traducciones
+- [x] Crear estructura básica de `exam.html`
+- [x] Implementar funcionalidad de quiz en JavaScript
+- [x] Agregar introducción bilingüe
+- [x] Asegurar que las preguntas se carguen correctamente
+- [x] Implementar sistema de resultados
+- [x] Verificar compatibilidad con el sistema de traducciones
 
 ### 5. Mejoras en la página "Sobre mí"
 - [ ] Agregar sección de biografía personal

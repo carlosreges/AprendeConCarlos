@@ -1615,3 +1615,114 @@ body.dark-mode .quiz-container .selected-option {
     background-color: var(--accent) !important;
     color: white !important;
 }
+
+/* Estilos para modo oscuro */
+[data-theme="dark"],
+body.dark-mode {
+    --primary: #0d6efd;
+    --light: #222;
+    --dark: #f0f0f0;
+    color-scheme: dark;
+}
+
+[data-theme="dark"] body,
+body.dark-mode {
+    color: #e4e4e4;
+    background-color: #343a40;
+}
+
+[data-theme="dark"] .bg-light,
+body.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .text-dark,
+body.dark-mode .text-dark {
+    color: #e4e4e4 !important;
+}
+
+[data-theme="dark"] .navbar,
+body.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+[data-theme="dark"] .dropdown-menu,
+body.dark-mode .dropdown-menu {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="dark"] .dropdown-item,
+body.dark-mode .dropdown-item {
+    color: #e4e4e4 !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+body.dark-mode .dropdown-item:hover {
+    background-color: #3d3d3d !important;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .blog-item,
+body.dark-mode .card,
+body.dark-mode .blog-item {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+[data-theme="dark"] .card-body,
+body.dark-mode .card-body {
+    background-color: #2d2d2d !important;
+    color: #e4e4e4 !important;
+}
+
+[data-theme="dark"] .form-control,
+body.dark-mode .form-control {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e4e4e4 !important;
+}
+
+[data-theme="dark"] .form-floating label,
+body.dark-mode .form-floating label {
+    color: #adb5bd !important;
+}
+
+[data-theme="dark"] a:not(.btn),
+body.dark-mode a:not(.btn) {
+    color: #9ec5fe !important;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, 
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: #e4e4e4 !important;
+}
+
+[data-theme="dark"] p,
+body.dark-mode p {
+    color: #e4e4e4 !important;
+}
+
+/* Añadir esta regla para los iconos del footer en modo oscuro */
+[data-theme="dark"] .btn-outline-light,
+body.dark-mode .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer a:not(.btn-outline-light),
+body.dark-mode .footer a:not(.btn-outline-light) {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer-menu a,
+body.dark-mode .footer-menu a {
+    color: #adb5bd !important;
+}
+
+[data-theme="dark"] .footer-menu a:hover,
+body.dark-mode .footer-menu a:hover {
+    color: #ffffff !important;
+}
