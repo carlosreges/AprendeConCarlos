@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>eLEARNING - eLearning HTML Template</title>
+    <title>404 - Aprende con Carlos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -43,28 +43,44 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <img src="images/logoApCarlos.png" alt="logo" class="logo" />
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+            <h2 class="m-0 text-primary">Aprende con Carlos</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="index.html" class="nav-item nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-item nav-link" data-i18n="nav.about">Sobre mí</a>
+                <a href="exam.html" class="nav-item nav-link" data-i18n="nav.exam">Autoevaluación</a>
+                <a href="blog.html" class="nav-item nav-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="nav-item nav-link" data-i18n="nav.contact">Contacto</a>
+                
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="nav.languages">Idiomas</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
+                        <a href="#" class="dropdown-item language-option" data-lang="es" onclick="changeLanguage('es')">Español</a>
+                        <a href="#" class="dropdown-item language-option" data-lang="en" onclick="changeLanguage('en')">English</a>
+                        <a href="#" class="dropdown-item language-option" data-lang="pt" onclick="changeLanguage('pt')">Português</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                
+                <!-- Botón de cambio de tema -->
+                <div class="theme-switch-wrapper nav-item">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider">
+                            <i class="fas fa-sun sun-icon icon"></i>
+                            <i class="fas fa-moon moon-icon icon"></i>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join">
+                Únete ahora<i class="fa fa-arrow-right ms-3"></i>
+            </a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -75,11 +91,10 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Not Found</h1>
+                    <h1 class="display-3 text-white animated slideInDown" data-i18n="404.header">Página no encontrada</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html" data-i18n="nav.home">Inicio</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">404</li>
                         </ol>
                     </nav>
@@ -97,9 +112,9 @@
                 <div class="col-lg-6">
                     <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
                     <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
+                    <h1 class="mb-4" data-i18n="404.title">Página no encontrada</h1>
+                    <p class="mb-4" data-i18n="404.message">Lo sentimos, la página que buscas no existe en nuestro sitio. ¿Por qué no regresas al inicio o intentas usar el menú de navegación?</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.html" data-i18n="404.button">Volver al inicio</a>
                 </div>
             </div>
         </div>
@@ -111,56 +126,27 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                <!-- Primera columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.links">Enlaces importantes</h4>
+                    <a class="btn btn-link" href="/blog.html">Blog</a>
+                    <a class="btn btn-link" href="https://www.fundeu.es/" target="_blank">Fundeú</a>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/aprendeconcarlos"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://facebook.com/aprendeconcarlos"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://youtube.com/aprendeconcarlos"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://linkedin.com/in/aprendeconcarlos"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                <!-- Segunda columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.contact">Contacto</h4>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>Córdoba, Argentina
+                    </p>
+                    <p class="mb-2" data-i18n="footer.inquiry">
+                        Para consultas, por favor utiliza el formulario de contacto arriba.
+                    </p>
                 </div>
             </div>
         </div>
@@ -168,18 +154,15 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                        &copy; <a class="border-bottom" href="#">Aprende con Carlos</a>
+                        <span data-i18n="footer.rights">Todos los derechos reservados</span>.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.html" data-i18n="nav.home">Home</a>
+                            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+                            <a href="help.html" data-i18n="footer.help">Ayuda</a>
+                            <a href="faqs.html" data-i18n="footer.faqs">FAQs</a>
                         </div>
                     </div>
                 </div>
@@ -203,6 +186,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-clean.js"></script>
 </body>
 
 </html>

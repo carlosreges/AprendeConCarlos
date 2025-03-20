@@ -309,7 +309,7 @@ const translations = {
         "about.greeting": "Olá! Sou o Carlos",
         "about.description": "Como professor apaixonado de Língua e Literatura, dedico-me há mais de 15 anos a compartilhar a riqueza do idioma espanhol. Minha experiência abrange desde o ensino dos fundamentos gramaticais até as complexidades da redação criativa e profissional.",
         "about.methodology": "Minha metodologia é baseada em três pilares fundamentais:",
-        "about.approach": "Sou apaixonado por inovar no ensino, implementando constantemente novas estratégias didáticas que garantam um aprendizado efetivo e duradouro. Acredito firmemente em adaptar as metodologias a cada aluno, garantindo que o conhecimento seja consolidado de forma natural e permanente.",
+        "about.approach": "Sou apaixonado por inovar no ensino, implementando constantemente novas estratégias didáticas que garantam um aprendizado efetivo e duradouro. Acredito firmemente em adaptar as metodologias a cada aluno, garantindo que o conhecimento se estabeleça de forma natural e permanente.",
         "about.pillar1": "Domínio gramatical sólido",
         "about.pillar2": "Excelência em ortografia",
         "about.pillar3": "Habilidades avançadas de redação",
@@ -398,6 +398,73 @@ const translations = {
         "footer.testimonials": "Depoimentos"
     }
 };
+
+// Traducciones para contacto
+const contactTranslations = {
+    "es": {
+        "contact.intro": "Completa el formulario y te responderé a la brevedad. Las clases son personalizadas y adaptadas a tus necesidades específicas.",
+        "contact.info_title": "Información de contacto",
+        "contact.info_text": "Puedes contactarme directamente por correo o a través de redes sociales.",
+        "contact.whatsapp_text": "Disponible para consultas rápidas",
+        "contact.name": "Nombre completo",
+        "contact.email": "Email",
+        "contact.level": "Nivel de español",
+        "contact.level_beginner": "Principiante",
+        "contact.level_intermediate": "Intermedio",
+        "contact.level_advanced": "Avanzado",
+        "contact.subject": "Asunto",
+        "contact.message": "Mensaje",
+        "contact.submit": "Enviar mensaje",
+        "contact.success_title": "¡Mensaje enviado!",
+        "contact.success_message": "Gracias por tu mensaje. Te responderé a la brevedad posible.",
+        "contact.success_button": "Aceptar"
+    },
+    "en": {
+        "contact.intro": "Fill out the form and I'll get back to you shortly. Classes are personalized and adapted to your specific needs.",
+        "contact.info_title": "Contact Information",
+        "contact.info_text": "You can contact me directly by email or through social media.",
+        "contact.whatsapp_text": "Available for quick inquiries",
+        "contact.name": "Full Name",
+        "contact.email": "Email",
+        "contact.level": "Spanish Level",
+        "contact.level_beginner": "Beginner",
+        "contact.level_intermediate": "Intermediate",
+        "contact.level_advanced": "Advanced",
+        "contact.subject": "Subject",
+        "contact.message": "Message",
+        "contact.submit": "Send Message",
+        "contact.success_title": "Message Sent!",
+        "contact.success_message": "Thank you for your message. I will respond as soon as possible.",
+        "contact.success_button": "OK"
+    },
+    "pt": {
+        "contact.intro": "Preencha o formulário e responderei em breve. As aulas são personalizadas e adaptadas às suas necessidades específicas.",
+        "contact.info_title": "Informações de contato",
+        "contact.info_text": "Você pode me contatar diretamente por e-mail ou através das redes sociais.",
+        "contact.whatsapp_text": "Disponível para consultas rápidas",
+        "contact.name": "Nome completo",
+        "contact.email": "Email",
+        "contact.level": "Nível de espanhol",
+        "contact.level_beginner": "Iniciante",
+        "contact.level_intermediate": "Intermediário",
+        "contact.level_advanced": "Avançado",
+        "contact.subject": "Assunto",
+        "contact.message": "Mensagem",
+        "contact.submit": "Enviar mensagem",
+        "contact.success_title": "Mensagem enviada!",
+        "contact.success_message": "Obrigado pela sua mensagem. Responderei o mais breve possível.",
+        "contact.success_button": "OK"
+    }
+};
+
+// Actualizar el objeto principal de traducciones
+Object.keys(aboutTranslations).forEach(lang => {
+    translations[lang] = {...translations[lang], ...aboutTranslations[lang]};
+});
+
+Object.keys(contactTranslations).forEach(lang => {
+    translations[lang] = {...translations[lang], ...contactTranslations[lang]};
+});
 
 function changeLanguage(lang) {
     // Guardar el idioma seleccionado en localStorage

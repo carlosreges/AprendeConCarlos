@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Aprende con Carlos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="espanhol online, espanhol para principiantes, espanhol para intermediario, espanhol para avanzado, clases en español, clases en línea" name="keywords">
-    <meta content="Aprende español con Carlos, un profesor nativo de español. Únete a nuestras clases de español en línea y mejora tus habilidades lingüísticas con actividades atractivas y ejercicios interactivos." name="description">
+    <meta content="profesor español, clases español, aprender español, español online, spanish classes, spanish teacher" name="keywords">
+    <meta content="Conoce a Carlos Reges, profesor nativo de español con más de 15 años de experiencia enseñando el idioma. Metodología personalizada y efectiva." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon">
@@ -94,8 +94,8 @@
                     <h1 class="display-3 text-white animated slideInDown" data-i18n="contact.title">Contacto</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#" data-i18n="nav.home">Inicio</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#" data-i18n="nav.contact">Contacto</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html" data-i18n="nav.home">Inicio</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="contact.html" data-i18n="nav.contact">Contacto</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -109,57 +109,73 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="contact.subtitle">Contacto</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="contact.title">Contacto</h6>
                 <h1 class="mb-5" data-i18n="contact.heading">¿Tienes alguna pregunta?</h1>
+                <p class="mb-4" data-i18n="contact.intro">Completa el formulario y te responderé a la brevedad. Las clases son personalizadas y adaptadas a tus necesidades específicas.</p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 data-i18n="contact.getintouch">Ponte en contacto</h5>
-                    <p class="mb-4" data-i18n="contact.description">
-                        ¿Tienes dudas sobre las clases? ¿Quieres saber más sobre los cursos? 
-                        Completa el formulario y me pondré en contacto contigo lo antes posible.
-                    </p>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 data-i18n="contact.info_title">Información de contacto</h5>
+                    <p class="mb-4" data-i18n="contact.info_text">Puedes contactarme directamente por correo o a través de redes sociales.</p>
                     <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-map-marker-alt text-white"></i>
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px">
+                            <i class="fa fa-envelope-open text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary" data-i18n="contact.location">Ubicación</h5>
-                            <p class="mb-0">Córdoba, Argentina</p>
+                            <a href="mailto:profereges@gmail.com"><h5 class="text-primary">Email</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">WhatsApp</h5>
+                            <p class="mb-0" data-i18n="contact.whatsapp_text">Disponible para consultas rápidas</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form id="contactForm" action="https://formspree.io/f/mrbppgqj" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
-                                    <label for="name" data-i18n="contact.name">Tu nombre</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
+                                    <label for="name" data-i18n="contact.name">Nombre completo</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Tu email">
-                                    <label for="email" data-i18n="contact.email">Tu email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Tu email" required>
+                                    <label for="email" data-i18n="contact.email">Email</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                                    <select class="form-control" id="level" name="level" required>
+                                        <option value="" selected disabled>-- Selecciona --</option>
+                                        <option value="principiante" data-i18n="contact.level_beginner">Principiante</option>
+                                        <option value="intermedio" data-i18n="contact.level_intermediate">Intermedio</option>
+                                        <option value="avanzado" data-i18n="contact.level_advanced">Avanzado</option>
+                                    </select>
+                                    <label for="level" data-i18n="contact.level">Nivel de español</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
                                     <label for="subject" data-i18n="contact.subject">Asunto</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" data-i18n="contact.placeholder" placeholder="Deja tu mensaje aquí" id="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="message" name="message" style="height: 150px" required></textarea>
                                     <label for="message" data-i18n="contact.message">Mensaje</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit" data-i18n="contact.send">
-                                    Enviar mensaje
-                                </button>
+                                <button class="btn btn-primary w-100 py-3" type="submit" data-i18n="contact.submit">Enviar mensaje</button>
                             </div>
                         </div>
                     </form>
@@ -168,6 +184,24 @@
         </div>
     </div>
     <!-- Contact End -->
+
+    <!-- Success message modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="successModalLabel" data-i18n="contact.success_title">¡Mensaje enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p data-i18n="contact.success_message">Gracias por tu mensaje. Te responderé a la brevedad posible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-i18n="contact.success_button">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer Start -->
@@ -180,10 +214,10 @@
                     <a class="btn btn-link" href="/blog.html">Blog</a>
                     <a class="btn btn-link" href="https://www.fundeu.es/" target="_blank">Fundeú</a>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/aprendeconcarlos"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://facebook.com/aprendeconcarlos"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://youtube.com/aprendeconcarlos"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://linkedin.com/in/aprendeconcarlos"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <!-- Segunda columna -->
@@ -210,9 +244,9 @@
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <a href="index.html" data-i18n="nav.home">Home</a>
-                            <a href="#" data-i18n="footer.cookies">Cookies</a>
-                            <a href="#" data-i18n="footer.help">Ayuda</a>
-                            <a href="#" data-i18n="footer.faqs">FAQs</a>
+                            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+                            <a href="help.html" data-i18n="footer.help">Ayuda</a>
+                            <a href="faqs.html" data-i18n="footer.faqs">FAQs</a>
                         </div>
                     </div>
                 </div>
@@ -238,6 +272,7 @@
     <script src="js/main.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/theme-clean.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>

@@ -10,22 +10,22 @@ window.quizQuestions = [
         correct: 1
     },
     {
-        question: "¿Qué tipo de palabra es 'rápidamente'?",
+        question: "¿Qué _______ para la cena de mañana?",
         options: [
-            "Sustantivo",
-            "Adjetivo",
-            "Adverbio",
-            "Verbo"
+            "cociné",
+            "cocinaba",
+            "cocinaré",
+            "había cocinado"
         ],
         correct: 2
     },
     {
-        question: "Identifica el sujeto en: 'Los pájaros cantan en el árbol'",
+        question: "Los estudiantes siempre quieren ir _______",
         options: [
-            "En el árbol",
-            "Cantan",
-            "Los pájaros",
-            "No tiene sujeto"
+            "en el árbol.",
+            "sin alegría.",
+            "al parque.",
+            "con el cansancio."
         ],
         correct: 2
     },
@@ -63,7 +63,7 @@ window.quizQuestions = [
     },
     {
         question: "La chica con la cámara está sonriendo. ¿Qué expresión usarías para describir su estado de ánimo?",
-        image: "img/quiz/camera.png",
+        image: "img/quiz/camera.jpg",
         options: [
             "Está que no cabe en sí de gozo",
             "Está como pez en el agua",
@@ -255,7 +255,7 @@ window.quizQuestions = [
     },
     {
         question: "Escucha el audio y selecciona la opción que mejor describe la situación:",
-        audio: "path/to/conversation1.mp3",
+        audio: "audio/quiz/beisbol-cuba.mp3",
         audioText: "Transcripción del audio (oculta hasta completar el ejercicio)",
         options: [
             "Una reserva en un restaurante",
@@ -268,7 +268,7 @@ window.quizQuestions = [
     },
     {
         question: "¿Qué emoción expresa principalmente la persona que habla?",
-        audio: "path/to/conversation2.mp3",
+        audio: "audio/quiz/beisbol-cuba.mp3",
         audioText: "Transcripción del audio (oculta)",
         options: [
             "Entusiasmo",
@@ -281,7 +281,7 @@ window.quizQuestions = [
     },
     {
         question: "Escucha el audio y responde: ¿Dónde se celebran los carnavales más espectaculares según el hablante?",
-        audio: "path/to/carnaval_espana.mp3",
+        audio: "audio/quiz/carnaval_espana.mp3",
         audioText: "En España se celebra mucho el carnaval, hay muchos carnavales y, bueno, los más espectaculares con diferencias son los de Tenerife y Gran Canaria, hay mucha fiesta en la calle, hace mucho calor, se preparan mucho los desfiles, los trajes.",
         options: [
             "Madrid y Barcelona",
@@ -294,7 +294,7 @@ window.quizQuestions = [
     },
     {
         question: "Según el audio, ¿qué caracteriza a estos carnavales?",
-        audio: "path/to/carnaval_espana.mp3",
+        audio: "audio/quiz/carnaval_espana.mp3",
         audioText: "En España se celebra mucho el carnaval, hay muchos carnavales y, bueno, los más espectaculares con diferencias son los de Tenerife y Gran Canaria, hay mucha fiesta en la calle, hace mucho calor, se preparan mucho los desfiles, los trajes.",
         options: [
             "Son muy tranquilos y familiares",
@@ -307,7 +307,7 @@ window.quizQuestions = [
     },
     {
         question: "¿Qué palabra se repite más en el audio?",
-        audio: "path/to/carnaval_espana.mp3",
+        audio: "audio/quiz/carnaval_espana.mp3",
         audioText: "En España se celebra mucho el carnaval, hay muchos carnavales y, bueno, los más espectaculares con diferencias son los de Tenerife y Gran Canaria, hay mucha fiesta en la calle, hace mucho calor, se preparan mucho los desfiles, los trajes.",
         options: [
             "España",
@@ -409,15 +409,15 @@ function fixImagePaths() {
 document.addEventListener('DOMContentLoaded', fixImagePaths);
 
 // Función específica para arreglar las imágenes problemáticas
-/*function fixSpecificImages() {
+function fixSpecificImages() {
     if (!window.quizQuestions) return;
     
     // Mapeo de rutas problemáticas a rutas correctas
     const imageMapping = {
-        'path/to/airport.png': 'img/quiz/airport.png',
-        'path/to/tourists.png': 'img/quiz/tourists.png',
-        'path/to/train.png': 'img/quiz/train.png',
-        'path/to/cat.png': 'img/quiz/cat.png'
+        'img/quiz/airport.png': 'img/quiz/airport.png',
+        'img/quiz/tourists.png': 'img/quiz/tourists.png',
+        'img/quiz/train.png': 'img/quiz/train.png',
+        'img/quiz/cat.png': 'img/quiz/cat.png'
     };
     
     // Corregir rutas de imágenes específicas
@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', fixImagePaths);
             img.src = question.image;
         }
     });
-}*/
+}
 
 // Llamar a esta función al cargar la página
 document.addEventListener('DOMContentLoaded', fixSpecificImages);
