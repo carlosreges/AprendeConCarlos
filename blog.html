@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Aprende con Carlos</title>
+    <title>Blog de Español - Recursos y Consejos | Aprende con Carlos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="blog español, aprender español, español latinoamericano, tips español, recursos aprendizaje español, blog idioma español" name="keywords" />
-    <meta content="Explora nuestro blog con recursos, consejos y artículos para aprender español de forma efectiva. Mejora tu gramática, vocabulario y comprensión cultural del mundo hispanohablante." name="description" />
+    <meta content="blog español, recursos español, consejos aprender español, gramática española, cultura latinoamericana, español para extranjeros, tips español" name="keywords" />
+    <meta content="Blog con recursos gratuitos, consejos y artículos sobre el idioma español. Mejora tu gramática, vocabulario y comprensión cultural con nuestros contenidos actualizados regularmente." name="description" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aprendeconcarlos.com/blog.html">
+    <meta property="og:title" content="Blog de Español - Recursos y Consejos | Aprende con Carlos">
+    <meta property="og:description" content="Recursos gratuitos, consejos y artículos sobre el idioma español. Mejora tu español con nuestros contenidos actualizados regularmente.">
+    <meta property="og:image" content="https://aprendeconcarlos.com/img/og-image-blog.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aprendeconcarlos.com/blog.html">
+    <meta property="twitter:title" content="Blog de Español - Recursos y Consejos | Aprende con Carlos">
+    <meta property="twitter:description" content="Recursos gratuitos, consejos y artículos sobre el idioma español. Mejora tu español con nuestros contenidos actualizados regularmente.">
+    <meta property="twitter:image" content="https://aprendeconcarlos.com/img/og-image-blog.jpg">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" />
@@ -34,6 +48,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- Blog Stylesheet -->
+    <link href="css/blog-style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -90,7 +107,7 @@
             </label>
           </div>
         </div>
-        <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join">
+        <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join" style="font-size: 1.25rem; font-weight: 600;">
           Únete ahora<i class="fa fa-arrow-right ms-3"></i>
         </a>
       </div>
@@ -120,13 +137,55 @@
     <!-- Blog Start -->
     <div class="container-xxl py-5">
       <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="blog.subtitle">Artículos</h6>
-          <h1 class="mb-5" data-i18n="blog.heading">Tips y recursos para aprender español</h1>
+        <!-- Versión mejorada de las categorías -->
+        <div class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h4 class="sidebar-title">Categorías</h4>
+            
+            <!-- Versión escritorio (visible solo en pantallas md y superiores) -->
+            <div class="mt-4 d-none d-md-block">
+                <a href="#" class="category-item">
+                    <i class="fa fa-angle-right"></i> Gramática
+                    <span>8</span>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fa fa-angle-right"></i> Vocabulario
+                    <span>6</span>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fa fa-angle-right"></i> Cultura
+                    <span>5</span>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fa fa-angle-right"></i> Consejos
+                    <span>4</span>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fa fa-angle-right"></i> Español Específico
+                    <span>3</span>
+                </a>
+            </div>
+            
+            <!-- Versión móvil dropdown (visible solo en pantallas sm y xs) -->
+            <div class="mt-4 d-md-none">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle w-100" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleccionar categoría
+                    </button>
+                    <ul class="dropdown-menu w-100" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-angle-right me-2"></i>Gramática <span class="badge bg-primary float-end">8</span></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-angle-right me-2"></i>Vocabulario <span class="badge bg-primary float-end">6</span></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-angle-right me-2"></i>Cultura <span class="badge bg-primary float-end">5</span></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-angle-right me-2"></i>Consejos <span class="badge bg-primary float-end">4</span></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-angle-right me-2"></i>Español Específico <span class="badge bg-primary float-end">3</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="row g-4">
+        
+        <!-- Listado de artículos -->
+        <div class="row g-4 justify-content-center">
           <!-- Artículo 1 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.1s" data-category="grammar">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-1.jpg" alt="">
@@ -144,7 +203,7 @@
             </div>
           </div>
           <!-- Artículo 2 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.3s" data-category="vocabulary">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-2.jpg" alt="">
@@ -162,7 +221,7 @@
             </div>
           </div>
           <!-- Artículo 3 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.5s" data-category="culture">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-3.jpg" alt="">
@@ -180,7 +239,7 @@
             </div>
           </div>
           <!-- Artículo 4 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.1s" data-category="tips">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-1.jpg" alt="">
@@ -198,7 +257,7 @@
             </div>
           </div>
           <!-- Artículo 5 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.3s" data-category="specific">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-2.jpg" alt="">
@@ -216,7 +275,7 @@
             </div>
           </div>
           <!-- Artículo 6 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-lg-4 col-md-6 blog-item wow fadeInUp" data-wow-delay="0.5s" data-category="specific">
             <div class="blog-item bg-light rounded overflow-hidden">
               <div class="blog-img position-relative overflow-hidden">
                 <img class="img-fluid" src="img/blog-3.jpg" alt="">
@@ -306,6 +365,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/theme-clean.js"></script>
+    <script src="js/error-handler.js"></script>
+    
+    <!-- Blog Javascript -->
+    <script src="js/blog.js"></script>
   </body>
 </html>

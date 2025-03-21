@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://aprendeconcarlos.com.ar/sitemap.xml
+
+# Evitar que indexen páginas duplicadas o no necesarias
+Disallow: /404.html
+Disallow: /cookies.html 

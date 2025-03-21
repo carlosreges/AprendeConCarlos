@@ -1,3 +1,4 @@
+// Objeto con todas las traducciones
 const translations = {
     es: {
         // Navegación
@@ -6,38 +7,43 @@ const translations = {
         "nav.blog": "Blog",
         "nav.languages": "Idiomas",
         "nav.join": "Únete ahora",
+        "nav.exam": "Autoevaluación",
+        "nav.contact": "Contacto",
         
         // Carrusel
-        "carousel.title1": "Conversaciones en vivo con un profesor nativo",
-        "carousel.heading": "Aprende español ahora",
-        "carousel.text": "Explora el fascinante mundo del idioma español! Desde principiantes hasta avanzados, ofrecemos lecciones diseñadas para ti. Sumérgete en la cultura latinoamericana y desata tu potencial lingüístico.",
-        "carousel.highlight": "¡Habla, lee y escucha de una manera divertida y efectiva hoy!",
-        "carousel.button1": "Más información",
+        "carousel.title1": "Aprende español con un profesor nativo",
+        "carousel.heading": "Tu aventura al Español comienza aquí",
+        "carousel.text": "Clases personalizadas con un profesor nativo. Mejora tus habilidades lingüísticas con actividades atractivas y ejercicios interactivos.",
+        "carousel.highlight": "¡Aprende español con un profesor experto desde cualquier lugar del mundo!",
+        "carousel.button1": "Más info",
         "carousel.button2": "Únete ahora",
+        "carousel.title2": "Conversaciones en vivo con un profesor nativo",
+        "carousel.heading2": "Aprende Español ahora",
+        "carousel.text2": "Explora el fascinante mundo del idioma español. Desde principiantes hasta avanzados, ofrecemos lecciones diseñadas para ti. Sumérgete en la cultura latinoamericana y desata tu potencial lingüístico.",
         
         // Servicios
         "services.title": "Servicios",
         "services.heading": "Lo que ofrezco",
-        "services.reading.title": "Material de lectura",
-        "services.reading.text": "Textos seleccionados para cada nivel",
-        "services.online.title": "Clases en línea",
-        "services.online.text": "Desde cualquier lugar del mundo",
-        "services.culture.title": "Inmersión cultural",
-        "services.culture.text": "Aprende sobre nuestra cultura",
-        "services.music.title": "Música y diversión",
-        "services.music.text": "Aprende con canciones y juegos",
+        "services.reading.title": "Material exclusivo",
+        "services.reading.text": "Material de lectura y ejercicios adaptados a tus necesidades y nivel de español.",
+        "services.online.title": "Clases Online",
+        "services.online.text": "Aprende desde cualquier lugar del mundo a través de plataformas como Zoom o Google Meet.",
+        "services.culture.title": "Cultura latinoamericana",
+        "services.culture.text": "Aprende no solo el idioma, sino también la cultura, costumbres y tradiciones de Latinoamérica.",
+        "services.music.title": "Actividades con música",
+        "services.music.text": "Aprende español a través de canciones y otros recursos audiovisuales interactivos.",
         
         // Sobre mí
         "about.title": "Sobre mí",
-        "about.question": "¿Quién soy yo?",
-        "about.text1": "Me llamo Carlos Reges, soy profesor de Lengua Española y Literatura. He sido docente por más de 15 años y deseo enseñarte mi idioma a través de ejercicios prácticos, conversaciones amenas y otras actividades que te ayudarán a aprender y mejorar tu aprendizaje.",
-        "about.skill1": "Profesor de Lengua",
-        "about.skill2": "Amante de la lectura",
+        "about.question": "¿Por qué elegirme como tu profesor?",
+        "about.text1": "Soy Carlos Reges, profesor nativo de español con más de 15 años de experiencia enseñando a estudiantes de todo el mundo. Mi enfoque único combina gramática estructurada con inmersión cultural para un aprendizaje efectivo.",
+        "about.skill1": "Profesor nativo venezolano",
+        "about.skill2": "Experiencia internacional",
         "about.skill3": "Corrector ortográfico",
         "about.skill4": "Excelente cocinero",
         "about.skill5": "Innovador y empírico",
         "about.skill6": "Dispuesto a ayudarte",
-        "about.button": "Más sobre mí",
+        "about.button": "Conóceme más",
         "about.subtitle": "Mi Historia",
         "about.greeting": "¡Hola! Soy Carlos",
         "about.description": "Como docente apasionado de Lengua y Literatura, llevo más de 15 años dedicándome a compartir la riqueza del idioma español. Mi experiencia abarca desde la enseñanza de los fundamentos gramaticales hasta las complejidades de la redacción creativa y profesional.",
@@ -46,28 +52,40 @@ const translations = {
         "about.pillar1": "Dominio gramatical sólido",
         "about.pillar2": "Excelencia en ortografía",
         "about.pillar3": "Habilidades avanzadas de redacción",
+        "about.biography": "Nacido en Venezuela y actualmente residiendo en Córdoba, Argentina, descubrí mi pasión por la enseñanza mientras estudiaba Letras en la universidad. Con más de 15 años de experiencia como profesor de Lengua y dominio del inglés, he desarrollado un método ameno y didáctico para enseñar español.",
+        "about.experience": "Mi enfoque se caracteriza por la constante búsqueda de formas innovadoras para enseñar el español latinoamericano a estudiantes no hispanohablantes. Creo firmemente que el aprendizaje de un idioma debe ser una experiencia enriquecedora y culturalmente inmersiva, no solo un ejercicio académico.",
+        "about.methods_title": "Mi Estilo de Enseñanza",
+        "about.method1": "Material audiovisual ameno: canciones, videos cortos y mi podcast de español",
+        "about.method2": "Inmersión cultural latinoamericana: tradiciones, expresiones y contextos cotidianos",
+        "about.method3": "Enseñanza gramatical concisa y didáctica, sin complicaciones innecesarias",
+        "about.method4": "Desarrollo de fluidez y confianza en la conversación desde la primera clase",
         
         // Categorías
-        "categories.title": "Actividades",
-        "categories.heading": "¿Cómo aprenderás español?",
-        "categories.item1": "Libros y relatos cortos",
+        "categories.title": "Categorías",
+        "categories.heading": "Explora nuestras categorías principales",
+        "categories.item1": "Gramática",
         "categories.item2": "Conversaciones en vivo",
         "categories.item3": "Ejercicios interactivos",
         "categories.item4": "Videos tutoriales",
         
         // Cursos
-        "courses.title": "Diferentes niveles",
-        "courses.heading": "Categoría de cursos",
-        "courses.beginner": "Español para Principiantes (A1-A2)",
-        "courses.intermediate": "Español Intermedio (B1-B2)",
-        "courses.advanced": "Español Avanzado (C1)",
-        "courses.more": "Más información",
-        "courses.join": "Únete ahora",
-        "courses.students": "Alumnos",
+        "courses.title": "Mis cursos",
+        "courses.heading": "Cursos populares",
+        "courses.beginner": "Español para principiantes",
+        "courses.intermediate": "Español intermedio",
+        "courses.advanced": "Español avanzado",
+        "courses.more": "Ver más",
+        "courses.join": "Inscríbete",
+        "courses.students": "estudiantes",
+        
+        // Social
+        "social.title": "Sígueme",
+        "social.heading": "Conectemos en redes sociales",
+        "social.description": "Sigue mis redes sociales para obtener consejos diarios, ejercicios gratuitos y estar al día con las novedades.",
         
         // Contacto
         "contact.title": "Contacto",
-        "contact.heading": "Realiza tu consulta",
+        "contact.heading": "Contáctame para más información",
         "contact.location": "Ubicación",
         "contact.phone": "Teléfono",
         "contact.name": "Tu nombre",
@@ -78,6 +96,7 @@ const translations = {
         "contact.subtitle": "Contacto",
         "contact.getintouch": "Ponte en contacto",
         "contact.description": "¿Tienes dudas sobre las clases? ¿Quieres saber más sobre los cursos? Completa el formulario y me pondré en contacto contigo lo antes posible.",
+        "contact.submit": "Enviar",
         
         // Footer
         "footer.links": "Enlaces importantes",
@@ -88,52 +107,7 @@ const translations = {
         "footer.help": "Ayuda",
         "footer.faqs": "Preguntas frecuentes",
         "footer.contact.text": "Para consultas, por favor utiliza el formulario de contacto arriba.",
-
-        exam: {
-            title: "Autoevaluación",
-            breadcrumb: "Autoevaluación",
-            start: "Comenzar evaluación",
-            next: "Siguiente pregunta",
-            finish: "Finalizar quiz",
-            loading: "Cargando preguntas..."
-        },
-        // Las explicaciones sí se traducen
-        explanations: {
-            ser_estar: "La diferencia principal entre 'ser' y 'estar' es...",
-            modismos: "Los modismos son expresiones propias del idioma que..."
-        },
-        theme: {
-            light: "Modo claro",
-            dark: "Modo oscuro",
-            toggle: "Cambiar tema",
-            message_dark: "¡Chocolate oscuro activado! 🍫",
-            message_light: "¡Chocolate blanco activado! 🍬"
-        },
-        // Traducciones para el Blog
-        "blog.title": "Blog",
-        "blog.subtitle": "Artículos",
-        "blog.heading": "Tips y recursos para aprender español",
-        "blog.grammar": "Gramática",
-        "blog.vocabulary": "Vocabulario",
-        "blog.culture": "Cultura",
-        "blog.tips": "Consejos",
-        "blog.resources": "Recursos",
-        "blog.literature": "Literatura",
-        "blog.readmore": "Leer más",
-        "blog.article1.title": "Errores comunes al usar los tiempos verbales",
-        "blog.article1.summary": "Descubre los errores más frecuentes que cometen los estudiantes al usar los tiempos verbales en español y cómo evitarlos.",
-        "blog.article2.title": "10 expresiones argentinas que debes conocer",
-        "blog.article2.summary": "Aprende algunas de las expresiones más usadas en Argentina y sorprende a tus amigos hispanohablantes con tu conocimiento del lunfardo.",
-        "blog.article3.title": "Festividades hispanas que no te puedes perder",
-        "blog.article3.summary": "Descubre las festividades más importantes del mundo hispanohablante y cómo estas celebraciones pueden ayudarte a entender mejor la cultura.",
-        "blog.article4.title": "5 hábitos para mejorar tu fluidez en español",
-        "blog.article4.summary": "Incorpora estos cinco hábitos a tu rutina diaria y notarás una mejora significativa en tu fluidez al hablar español.",
-        "blog.article5.title": "Los mejores podcasts para estudiantes de español",
-        "blog.article5.summary": "Una selección de podcasts en español para todos los niveles que te ayudarán a mejorar tu comprensión auditiva mientras aprendes sobre temas interesantes.",
-        "blog.article6.title": "Lecturas recomendadas para estudiantes de nivel intermedio",
-        "blog.article6.summary": "Descubre una lista de libros y cuentos cortos en español que son perfectos para estudiantes de nivel intermedio y que te ayudarán a enriquecer tu vocabulario.",
-        "footer.courses": "Cursos",
-        "footer.testimonials": "Testimonios"
+        "footer.inquiry": "Para consultas, por favor utiliza el formulario de contacto arriba."
     },
     en: {
         // Navigation
@@ -141,39 +115,44 @@ const translations = {
         "nav.about": "About me",
         "nav.blog": "Blog",
         "nav.languages": "Languages",
-        "nav.join": "Join Now",
+        "nav.join": "Join now",
+        "nav.exam": "Self-assessment",
+        "nav.contact": "Contact",
         
         // Carousel
-        "carousel.title1": "Live conversations with a native teacher",
-        "carousel.heading": "Learn Spanish now",
-        "carousel.text": "Explore the fascinating world of Spanish language! From beginners to advanced, we offer lessons designed for you. Immerse yourself in Latin American culture and unlock your linguistic potential.",
-        "carousel.highlight": "Speak, read, and listen in a fun and effective way today!",
-        "carousel.button1": "Read More",
-        "carousel.button2": "Join Now",
+        "carousel.title1": "Learn Spanish with a native teacher",
+        "carousel.heading": "Your Spanish Adventure starts here",
+        "carousel.text": "Personalized classes with a native teacher. Improve your language skills with engaging activities and interactive exercises.",
+        "carousel.highlight": "Learn Spanish with an expert teacher from anywhere in the world!",
+        "carousel.button1": "More info",
+        "carousel.button2": "Join now",
+        "carousel.title2": "Live conversations with a native teacher",
+        "carousel.heading2": "Learn Spanish now",
+        "carousel.text2": "Explore the fascinating world of Spanish language. From beginners to advanced, we offer lessons designed for you. Immerse yourself in Latin American culture and unleash your linguistic potential.",
         
         // Services
         "services.title": "Services",
         "services.heading": "What I Offer",
-        "services.reading.title": "Reading Material",
-        "services.reading.text": "Selected texts for each level",
+        "services.reading.title": "Exclusive material",
+        "services.reading.text": "Reading material and exercises adapted to your needs and Spanish level.",
         "services.online.title": "Online Classes",
-        "services.online.text": "From anywhere in the world",
-        "services.culture.title": "Cultural Immersion",
-        "services.culture.text": "Learn about our culture",
-        "services.music.title": "Music and Fun",
-        "services.music.text": "Learn with songs and games",
+        "services.online.text": "Learn from anywhere in the world through platforms like Zoom or Google Meet.",
+        "services.culture.title": "Latin American culture",
+        "services.culture.text": "Learn not only the language, but also the culture, customs and traditions of Latin America.",
+        "services.music.title": "Activities with music",
+        "services.music.text": "Learn Spanish through songs and other interactive audiovisual resources.",
         
         // About
         "about.title": "About me",
-        "about.question": "Who am I?",
-        "about.text1": "My name is Carlos Reges, and I'm a teacher of Spanish Language and Literature. I've been an educator for more than 15 years, and I want to teach you my language through practical exercises, enjoyable conversations, and other activities that will help you learn and improve your learning.",
-        "about.skill1": "Language Teacher",
-        "about.skill2": "Book Lover",
+        "about.question": "Why choose me as your teacher?",
+        "about.text1": "I'm Carlos Reges, a native Spanish teacher with over 15 years of experience teaching students from around the world. My unique approach combines structured grammar with cultural immersion for effective learning.",
+        "about.skill1": "Native Venezuelan teacher",
+        "about.skill2": "International experience",
         "about.skill3": "Proofreader",
         "about.skill4": "Excellent Cook",
         "about.skill5": "Innovative and Empirical",
         "about.skill6": "Ready to Help You",
-        "about.button": "Read More",
+        "about.button": "Learn more about me",
         "about.subtitle": "My Story",
         "about.greeting": "Hi! I'm Carlos",
         "about.description": "As a passionate Language and Literature teacher, I have spent over 15 years sharing the richness of the Spanish language. My experience ranges from teaching grammatical foundations to the complexities of creative and professional writing.",
@@ -182,41 +161,54 @@ const translations = {
         "about.pillar1": "Solid grammatical mastery",
         "about.pillar2": "Excellence in spelling",
         "about.pillar3": "Advanced writing skills",
+        "about.biography": "Born in Venezuela and currently residing in Córdoba, Argentina, I discovered my passion for teaching while studying Literature at university. With over 15 years of experience as a Language teacher and fluency in English, I have developed an engaging and didactic method for teaching Spanish.",
+        "about.experience": "My approach is characterized by the constant search for innovative ways to teach Latin American Spanish to non-Spanish speakers. I firmly believe that learning a language should be an enriching and culturally immersive experience, not just an academic exercise.",
+        "about.methods_title": "My Teaching Style",
+        "about.method1": "Engaging audiovisual material: songs, short videos, and my Spanish podcast",
+        "about.method2": "Latin American cultural immersion: traditions, expressions, and everyday contexts",
+        "about.method3": "Concise and didactic grammar teaching, without unnecessary complications",
+        "about.method4": "Development of fluency and confidence in conversation from the first class",
         
         // Categories
-        "categories.title": "Activities",
-        "categories.heading": "How will you learn Spanish?",
-        "categories.item1": "Books and Short Stories",
-        "categories.item2": "Live Conversations",
-        "categories.item3": "Interactive Exercises",
-        "categories.item4": "Tutorial Videos",
+        "categories.title": "Categories",
+        "categories.heading": "Explore our main categories",
+        "categories.item1": "Grammar",
+        "categories.item2": "Live conversations",
+        "categories.item3": "Interactive exercises",
+        "categories.item4": "Tutorial videos",
         
         // Courses
-        "courses.title": "Different Levels",
-        "courses.heading": "Course Categories",
-        "courses.beginner": "Spanish for Beginners (A1-A2)",
-        "courses.intermediate": "Intermediate Spanish (B1-B2)",
-        "courses.advanced": "Advanced Spanish (C1)",
-        "courses.more": "Read More",
-        "courses.join": "Join Now",
-        "courses.students": "Students",
+        "courses.title": "My courses",
+        "courses.heading": "Popular courses",
+        "courses.beginner": "Spanish for beginners",
+        "courses.intermediate": "Intermediate Spanish",
+        "courses.advanced": "Advanced Spanish",
+        "courses.more": "Read more",
+        "courses.join": "Join now",
+        "courses.students": "students",
+        
+        // Social
+        "social.title": "Follow me",
+        "social.heading": "Let's connect on social media",
+        "social.description": "Follow my social networks for daily tips, free exercises, and to stay updated with the latest news.",
         
         // Contact
         "contact.title": "Contact",
-        "contact.heading": "Get in Touch",
+        "contact.heading": "Contact me for more information",
         "contact.location": "Location",
         "contact.phone": "Phone",
-        "contact.name": "Your Name",
-        "contact.email": "Your Email",
+        "contact.name": "Your name",
+        "contact.email": "Your email",
         "contact.subject": "Subject",
         "contact.message": "Message",
         "contact.send": "Send Message",
         "contact.subtitle": "Contact",
         "contact.getintouch": "Get in touch",
         "contact.description": "Do you have questions about the classes? Want to know more about the courses? Fill out the form and I'll get back to you as soon as possible.",
+        "contact.submit": "Send",
         
         // Footer
-        "footer.links": "Important Links",
+        "footer.links": "Important links",
         "footer.contact": "Contact",
         "footer.rights": "All Rights Reserved",
         "footer.designed": "Designed by",
@@ -224,47 +216,7 @@ const translations = {
         "footer.help": "Help",
         "footer.faqs": "FAQs",
         "footer.contact.text": "For inquiries, please use the contact form above.",
-
-        exam: {
-            title: "Self-Assessment",
-            breadcrumb: "Self-Assessment",
-            start: "Start assessment",
-            next: "Next question",
-            finish: "Finish quiz",
-            loading: "Loading questions..."
-        },
-        theme: {
-            light: "Light mode",
-            dark: "Dark mode",
-            toggle: "Toggle theme",
-            message_dark: "Dark chocolate activated! 🍫",
-            message_light: "White chocolate activated! 🍬"
-        },
-        // Traducciones para el Blog
-        "blog.title": "Blog",
-        "blog.subtitle": "Articles",
-        "blog.heading": "Tips and resources for learning Spanish",
-        "blog.grammar": "Grammar",
-        "blog.vocabulary": "Vocabulary",
-        "blog.culture": "Culture",
-        "blog.tips": "Tips",
-        "blog.resources": "Resources",
-        "blog.literature": "Literature",
-        "blog.readmore": "Read more",
-        "blog.article1.title": "Common mistakes when using verb tenses",
-        "blog.article1.summary": "Discover the most frequent mistakes students make when using verb tenses in Spanish and how to avoid them.",
-        "blog.article2.title": "10 Argentine expressions you should know",
-        "blog.article2.summary": "Learn some of the most used expressions in Argentina and surprise your Spanish-speaking friends with your knowledge of lunfardo.",
-        "blog.article3.title": "Hispanic festivities you can't miss",
-        "blog.article3.summary": "Discover the most important festivities in the Spanish-speaking world and how these celebrations can help you better understand the culture.",
-        "blog.article4.title": "5 habits to improve your fluency in Spanish",
-        "blog.article4.summary": "Incorporate these five habits into your daily routine and you'll notice a significant improvement in your fluency when speaking Spanish.",
-        "blog.article5.title": "The best podcasts for Spanish students",
-        "blog.article5.summary": "A selection of Spanish podcasts for all levels that will help you improve your listening comprehension while learning about interesting topics.",
-        "blog.article6.title": "Recommended readings for intermediate students",
-        "blog.article6.summary": "Discover a list of books and short stories in Spanish that are perfect for intermediate level students and that will help you enrich your vocabulary.",
-        "footer.courses": "Courses",
-        "footer.testimonials": "Testimonials"
+        "footer.inquiry": "For inquiries, please use the contact form above."
     },
     pt: {
         // Navegação
@@ -272,39 +224,44 @@ const translations = {
         "nav.about": "Sobre mim",
         "nav.blog": "Blog",
         "nav.languages": "Idiomas",
-        "nav.join": "Participe agora",
+        "nav.join": "Junte-se agora",
+        "nav.exam": "Autoavaliação",
+        "nav.contact": "Contato",
         
         // Carrossel
-        "carousel.title1": "Conversas ao vivo com um professor nativo",
-        "carousel.heading": "Aprenda Espanhol agora",
-        "carousel.text": "Explore o fascinante mundo da língua espanhola! Desde iniciantes até avançados, oferecemos aulas projetadas para você. Mergulhe na cultura latino-americana e liberte seu potencial linguístico.",
-        "carousel.highlight": "Fale, leia e escute de uma forma divertida e eficaz hoje!",
-        "carousel.button1": "Saiba mais",
-        "carousel.button2": "Participe agora",
+        "carousel.title1": "Aprenda espanhol com um professor nativo",
+        "carousel.heading": "Sua aventura ao Espanhol começa aqui",
+        "carousel.text": "Aulas personalizadas com um professor nativo. Melhore suas habilidades linguísticas com atividades atraentes e exercícios interativos.",
+        "carousel.highlight": "Aprenda espanhol com um professor especialista de qualquer lugar do mundo!",
+        "carousel.button1": "Mais informações",
+        "carousel.button2": "Junte-se agora",
+        "carousel.title2": "Conversas ao vivo com um professor nativo",
+        "carousel.heading2": "Aprenda Espanhol agora",
+        "carousel.text2": "Explore o fascinante mundo da língua espanhola. De iniciantes a avançados, oferecemos aulas feitas para você. Mergulhe na cultura latino-americana e liberte seu potencial linguístico.",
         
         // Serviços
         "services.title": "Serviços",
         "services.heading": "O que ofereço",
-        "services.reading.title": "Material de leitura",
-        "services.reading.text": "Textos selecionados para cada nível",
-        "services.online.title": "Aulas online",
-        "services.online.text": "De qualquer lugar do mundo",
-        "services.culture.title": "Imersão cultural",
-        "services.culture.text": "Aprenda sobre nossa cultura",
-        "services.music.title": "Música e diversão",
-        "services.music.text": "Aprenda com músicas e jogos",
+        "services.reading.title": "Material exclusivo",
+        "services.reading.text": "Material de leitura e exercícios adaptados às suas necessidades e nível de espanhol.",
+        "services.online.title": "Aulas Online",
+        "services.online.text": "Aprenda de qualquer lugar do mundo através de plataformas como Zoom ou Google Meet.",
+        "services.culture.title": "Cultura latino-americana",
+        "services.culture.text": "Aprenda não apenas o idioma, mas também a cultura, costumes e tradições da América Latina.",
+        "services.music.title": "Atividades com música",
+        "services.music.text": "Aprenda espanhol através de canções e outros recursos audiovisuais interativos.",
         
         // Sobre
         "about.title": "Sobre mim",
-        "about.question": "Quem sou eu?",
-        "about.text1": "Meu nome é Carlos Reges, e sou professor de Língua Espanhola e Literatura. Sou educador há mais de 15 anos e quero te ensinar meu idioma através de exercícios práticos, conversas agradáveis e outras atividades que ajudarão você a aprender e melhorar seu aprendizado.",
-        "about.skill1": "Professor de Língua",
-        "about.skill2": "Amante da leitura",
+        "about.question": "Por que me escolher como seu professor?",
+        "about.text1": "Sou Carlos Reges, professor nativo de espanhol com mais de 15 anos de experiência ensinando alunos de todo o mundo. Minha abordagem única combina gramática estruturada com imersão cultural para um aprendizado eficaz.",
+        "about.skill1": "Professor nativo venezuelano",
+        "about.skill2": "Experiência internacional",
         "about.skill3": "Corretor ortográfico",
         "about.skill4": "Excelente cozinheiro",
         "about.skill5": "Inovador e empírico",
         "about.skill6": "Disposto a ajudá-lo",
-        "about.button": "Saiba mais",
+        "about.button": "Saiba mais sobre mim",
         "about.subtitle": "Minha História",
         "about.greeting": "Olá! Sou o Carlos",
         "about.description": "Como professor apaixonado de Língua e Literatura, dedico-me há mais de 15 anos a compartilhar a riqueza do idioma espanhol. Minha experiência abrange desde o ensino dos fundamentos gramaticais até as complexidades da redação criativa e profissional.",
@@ -313,38 +270,51 @@ const translations = {
         "about.pillar1": "Domínio gramatical sólido",
         "about.pillar2": "Excelência em ortografia",
         "about.pillar3": "Habilidades avançadas de redação",
+        "about.biography": "Nascido na Venezuela e atualmente residindo em Córdoba, Argentina, descobri minha paixão pelo ensino enquanto estudava Letras na universidade. Com mais de 15 anos de experiência como professor de Língua e fluência em inglês, desenvolvi um método agradável e didático para ensinar espanhol.",
+        "about.experience": "Minha abordagem caracteriza-se pela busca constante de formas inovadoras de ensinar o espanhol latino-americano a estudantes não hispanófonos. Acredito firmemente que aprender um idioma deve ser uma experiência enriquecedora e culturalmente imersiva, não apenas um exercício acadêmico.",
+        "about.methods_title": "Meu Estilo de Ensino",
+        "about.method1": "Material audiovisual envolvente: músicas, vídeos curtos e meu podcast de espanhol",
+        "about.method2": "Imersão cultural latino-americana: tradições, expressões e contextos cotidianos",
+        "about.method3": "Ensino gramatical conciso e didático, sem complicações desnecessárias",
+        "about.method4": "Desenvolvimento de fluência e confiança na conversação desde a primeira aula",
         
         // Categorias
-        "categories.title": "Atividades",
-        "categories.heading": "Como você vai aprender Espanhol?",
-        "categories.item1": "Livros e contos curtos",
+        "categories.title": "Categorias",
+        "categories.heading": "Explore nossas principais categorias",
+        "categories.item1": "Gramática",
         "categories.item2": "Conversas ao vivo",
         "categories.item3": "Exercícios interativos",
         "categories.item4": "Vídeos tutoriais",
         
         // Cursos
-        "courses.title": "Diferentes níveis",
-        "courses.heading": "Categorias de cursos",
-        "courses.beginner": "Espanhol para Iniciantes (A1-A2)",
-        "courses.intermediate": "Espanhol Intermediário (B1-B2)",
-        "courses.advanced": "Espanhol Avançado (C1)",
-        "courses.more": "Saiba mais",
-        "courses.join": "Participe agora",
-        "courses.students": "Alunos",
+        "courses.title": "Meus cursos",
+        "courses.heading": "Cursos populares",
+        "courses.beginner": "Espanhol para iniciantes",
+        "courses.intermediate": "Espanhol intermediário",
+        "courses.advanced": "Espanhol avançado",
+        "courses.more": "Leia mais",
+        "courses.join": "Junte-se agora",
+        "courses.students": "alunos",
         
-        // Contato
+        // Social
+        "social.title": "Siga-me",
+        "social.heading": "Vamos nos conectar nas redes sociais",
+        "social.description": "Siga minhas redes sociais para obter dicas diárias, exercícios gratuitos e ficar por dentro das novidades.",
+        
+        // Contacto
         "contact.title": "Contato",
-        "contact.heading": "Entre em contato",
+        "contact.heading": "Entre em contato para mais informações",
         "contact.location": "Localização",
         "contact.phone": "Telefone",
         "contact.name": "Seu nome",
-        "contact.email": "Seu e-mail",
+        "contact.email": "Seu email",
         "contact.subject": "Assunto",
         "contact.message": "Mensagem",
-        "contact.send": "Enviar mensagem",
+        "contact.send": "Enviar",
         "contact.subtitle": "Contato",
         "contact.getintouch": "Entre em contato",
         "contact.description": "Tem dúvidas sobre as aulas? Quer saber mais sobre os cursos? Preencha o formulário e entrarei em contato o mais breve possível.",
+        "contact.submit": "Enviar",
         
         // Rodapé
         "footer.links": "Links Importantes",
@@ -355,154 +325,58 @@ const translations = {
         "footer.help": "Ajuda",
         "footer.faqs": "Perguntas Frequentes",
         "footer.contact.text": "Para consultas, use o formulário de contato acima.",
-
-        exam: {
-            title: "Autoavaliação",
-            breadcrumb: "Autoavaliação",
-            start: "Iniciar avaliação",
-            next: "Próxima pergunta",
-            finish: "Finalizar quiz",
-            loading: "Carregando perguntas..."
-        },
-        theme: {
-            light: "Modo claro",
-            dark: "Modo escuro",
-            toggle: "Mudar tema",
-            message_dark: "Chocolate escuro ativado! 🍫",
-            message_light: "Chocolate branco ativado! 🍬"
-        },
-        // Traducciones para el Blog
-        "blog.title": "Blog",
-        "blog.subtitle": "Artigos",
-        "blog.heading": "Dicas e recursos para aprender espanhol",
-        "blog.grammar": "Gramática",
-        "blog.vocabulary": "Vocabulário",
-        "blog.culture": "Cultura",
-        "blog.tips": "Conselhos",
-        "blog.resources": "Recursos",
-        "blog.literature": "Literatura",
-        "blog.readmore": "Leia mais",
-        "blog.article1.title": "Erros comuns ao usar os tempos verbais",
-        "blog.article1.summary": "Descubra os erros mais frequentes que os alunos cometem ao usar os tempos verbais em espanhol e como evitá-los.",
-        "blog.article2.title": "10 expressões argentinas que você deve conhecer",
-        "blog.article2.summary": "Aprenda algumas das expressões mais usadas na Argentina e surpreenda seus amigos que falam espanhol com seu conhecimento do lunfardo.",
-        "blog.article3.title": "Festividades hispânicas que você não pode perder",
-        "blog.article3.summary": "Descubra as festividades mais importantes do mundo hispânico e como essas celebrações podem ajudá-lo a entender melhor a cultura.",
-        "blog.article4.title": "5 hábitos para melhorar sua fluência em espanhol",
-        "blog.article4.summary": "Incorpore estes cinco hábitos em sua rotina diária e você notará uma melhoria significativa em sua fluência ao falar espanhol.",
-        "blog.article5.title": "Os melhores podcasts para estudantes de espanhol",
-        "blog.article5.summary": "Uma seleção de podcasts em espanhol para todos os níveis que o ajudarão a melhorar sua compreensão auditiva enquanto aprende sobre tópicos interessantes.",
-        "blog.article6.title": "Leituras recomendadas para estudantes de nível intermediário",
-        "blog.article6.summary": "Descubra uma lista de livros e contos curtos em espanhol que são perfeitos para estudantes de nível intermediário e que o ajudarão a enriquecer seu vocabulário.",
-        "footer.courses": "Cursos",
-        "footer.testimonials": "Depoimentos"
+        "footer.inquiry": "Para consultas, por favor use o formulário de contato acima."
     }
 };
 
-// Traducciones para contacto
-const contactTranslations = {
-    "es": {
-        "contact.intro": "Completa el formulario y te responderé a la brevedad. Las clases son personalizadas y adaptadas a tus necesidades específicas.",
-        "contact.info_title": "Información de contacto",
-        "contact.info_text": "Puedes contactarme directamente por correo o a través de redes sociales.",
-        "contact.whatsapp_text": "Disponible para consultas rápidas",
-        "contact.name": "Nombre completo",
-        "contact.email": "Email",
-        "contact.level": "Nivel de español",
-        "contact.level_beginner": "Principiante",
-        "contact.level_intermediate": "Intermedio",
-        "contact.level_advanced": "Avanzado",
-        "contact.subject": "Asunto",
-        "contact.message": "Mensaje",
-        "contact.submit": "Enviar mensaje",
-        "contact.success_title": "¡Mensaje enviado!",
-        "contact.success_message": "Gracias por tu mensaje. Te responderé a la brevedad posible.",
-        "contact.success_button": "Aceptar"
-    },
-    "en": {
-        "contact.intro": "Fill out the form and I'll get back to you shortly. Classes are personalized and adapted to your specific needs.",
-        "contact.info_title": "Contact Information",
-        "contact.info_text": "You can contact me directly by email or through social media.",
-        "contact.whatsapp_text": "Available for quick inquiries",
-        "contact.name": "Full Name",
-        "contact.email": "Email",
-        "contact.level": "Spanish Level",
-        "contact.level_beginner": "Beginner",
-        "contact.level_intermediate": "Intermediate",
-        "contact.level_advanced": "Advanced",
-        "contact.subject": "Subject",
-        "contact.message": "Message",
-        "contact.submit": "Send Message",
-        "contact.success_title": "Message Sent!",
-        "contact.success_message": "Thank you for your message. I will respond as soon as possible.",
-        "contact.success_button": "OK"
-    },
-    "pt": {
-        "contact.intro": "Preencha o formulário e responderei em breve. As aulas são personalizadas e adaptadas às suas necessidades específicas.",
-        "contact.info_title": "Informações de contato",
-        "contact.info_text": "Você pode me contatar diretamente por e-mail ou através das redes sociais.",
-        "contact.whatsapp_text": "Disponível para consultas rápidas",
-        "contact.name": "Nome completo",
-        "contact.email": "Email",
-        "contact.level": "Nível de espanhol",
-        "contact.level_beginner": "Iniciante",
-        "contact.level_intermediate": "Intermediário",
-        "contact.level_advanced": "Avançado",
-        "contact.subject": "Assunto",
-        "contact.message": "Mensagem",
-        "contact.submit": "Enviar mensagem",
-        "contact.success_title": "Mensagem enviada!",
-        "contact.success_message": "Obrigado pela sua mensagem. Responderei o mais breve possível.",
-        "contact.success_button": "OK"
-    }
-};
-
-// Actualizar el objeto principal de traducciones
-Object.keys(aboutTranslations).forEach(lang => {
-    translations[lang] = {...translations[lang], ...aboutTranslations[lang]};
-});
-
-Object.keys(contactTranslations).forEach(lang => {
-    translations[lang] = {...translations[lang], ...contactTranslations[lang]};
-});
-
-function changeLanguage(lang) {
-    // Guardar el idioma seleccionado en localStorage
-    localStorage.setItem('selectedLanguage', lang);
-    
-    // Actualizar la clase activa en el menú
-    document.querySelectorAll('.language-option').forEach(option => {
-        option.classList.remove('active');
-        if (option.getAttribute('data-lang') === lang) {
-            option.classList.add('active');
-        }
-    });
-
-    // Actualizar todos los elementos con atributo data-i18n
+// Función para aplicar traducciones
+function applyTranslations(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`⚠️ Falta traducción para "${key}" en idioma "${lang}"`);
         }
     });
 }
 
-// Cargar el idioma guardado al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
-    changeLanguage(savedLanguage);
-});
+// Función para cambiar el idioma
+function changeLanguage(lang) {
+    // Guarda el idioma seleccionado en localStorage
+    localStorage.setItem('language', lang);
+    
+    // Aplica las traducciones
+    applyTranslations(lang);
+    
+    // Actualiza visualmente los botones de idioma
+    document.querySelectorAll('.language-option').forEach(option => {
+        if (option.getAttribute('data-lang') === lang) {
+            option.classList.add('active');
+        } else {
+            option.classList.remove('active');
+        }
+    });
+}
 
-// Separamos las preguntas en su propio objeto
-const quizQuestions = [
-    {
-        id: 1,
-        category: "conjugación",
-        difficulty: "básico",
-        question: "Completa: 'Yo _____ español todos los días.' (hablar)",
-        options: ["hablo", "hablas", "habla", "hablan"],
-        correct: 0,
-        explanation: "Primera persona singular del presente: yo hablo"
-    },
-    // ... resto de las preguntas ...
-]; 
+// Inicialización cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtén el idioma guardado o usa 'es' como predeterminado
+    const currentLang = localStorage.getItem('language') || 'es';
+    
+    // Aplica las traducciones al cargar la página
+    applyTranslations(currentLang);
+    
+    // Marca el idioma actual en el menú
+    document.querySelectorAll('.language-option').forEach(option => {
+        if (option.getAttribute('data-lang') === currentLang) {
+            option.classList.add('active');
+        } else {
+            option.classList.remove('active');
+        }
+    });
+}); 

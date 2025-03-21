@@ -2,10 +2,24 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Aprende con Carlos</title>
+    <title>Aprende Español Online con un Profesor Nativo | Aprende con Carlos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="spanish classes, spanish online, spanish for beginners, spanish for intermediate, spanish for advanced, clases en español, clases en línea, espanhol online, espanhol para principiantes, espanhol para intermediario, espanhol para avanzado" name="keywords" />
-    <meta content="Aprende español con Carlos, un profesor nativo de español. Únete a nuestras clases de español en línea y mejora tus habilidades lingüísticas con actividades atractivas y ejercicios interactivos." name="description" />
+    <meta content="clases de español, español online, aprender español, profesor de español, español para extranjeros, clases particulares, curso de español, hablar español, español latinoamericano" name="keywords" />
+    <meta content="Aprende español online con Carlos, profesor nativo con más de 15 años de experiencia. Clases personalizadas para todos los niveles y objetivos, desde principiantes hasta avanzados." name="description" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aprendeconcarlos.com/">
+    <meta property="og:title" content="Aprende Español Online con un Profesor Nativo | Aprende con Carlos">
+    <meta property="og:description" content="Clases de español personalizadas con un profesor nativo. Mejora tus habilidades lingüísticas desde cualquier parte del mundo.">
+    <meta property="og:image" content="https://aprendeconcarlos.com/img/og-image-home.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aprendeconcarlos.com/">
+    <meta property="twitter:title" content="Aprende Español Online con un Profesor Nativo | Aprende con Carlos">
+    <meta property="twitter:description" content="Clases de español personalizadas con un profesor nativo. Mejora tus habilidades lingüísticas desde cualquier parte del mundo.">
+    <meta property="twitter:image" content="https://aprendeconcarlos.com/img/og-image-home.jpg">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" />
@@ -96,7 +110,7 @@
             </label>
           </div>
         </div>
-        <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join">
+        <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join" style="font-size: 1.25rem; font-weight: 600;">
           Únete ahora<i class="fa fa-arrow-right ms-3"></i>
         </a>
       </div>
@@ -105,86 +119,42 @@
 
     
 
-    <!-- Carousel Start -->
+    <!-- Banner Start (reemplaza el carrusel) -->
     <div class="container-fluid p-0 mb-5">
-      <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/header.png" alt="" />
-          <div
-            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background: rgba(24, 29, 56, 0.7)">
+        <div class="position-relative banner-container">
+            <img class="img-fluid w-100" src="img/header.png" alt="Banner principal" style="max-height: 500px; object-fit: cover; object-position: center;" />
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" 
+                 style="background: rgba(24, 29, 56, 0.7)">
             <div class="container">
               <div class="row justify-content-start">
                 <div class="col-sm-10 col-lg-8">
-                  <h5
-                    class="text-primary text-uppercase mb-3 animated slideInDown"
-                    data-i18n="carousel.title1"
-                  ></h5>
-                  <h1 class="display-3 text-white animated slideInDown" data-i18n="carousel.heading"></h1>
-                  <p class="fs-5 text-white mb-4 pb-2" data-i18n="carousel.text"></p>
-                  <p class="fs-5 text-white mb-4 pb-2">
-                    <strong data-i18n="carousel.highlight"></strong>
-                  </p>
-                  <a
-                    href="about.html"
-                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    data-i18n="carousel.button1">Más info</a>
-                  <a
-                    href="contact.html"
-                    class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    data-i18n="carousel.button2">Únete ahora</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/header.png" alt="" />
-          <div
-            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background: rgba(24, 29, 56, 0.7)"
-          >
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-sm-10 col-lg-8">
-                  <h5
-                    class="text-primary text-uppercase mb-3 animated slideInDown"
-                    data-i18n="carousel.title2"
-                  >
-                    Conversaciones en vivo con un profesor nativo
+                            <h5 class="text-primary text-uppercase mb-2 animated fadeIn" data-i18n="carousel.title1">
+                                Aprende español con un profesor nativo
                   </h5>
-                  <h1 class="display-3 text-white animated slideInDown" data-i18n="carousel.heading2">
-                    Aprende Español ahora
+                            <h1 class="display-4 text-white animated fadeIn mb-3" data-i18n="carousel.heading">
+                                Tu Aventura al Español Comienza Aquí
                   </h1>
-                  <p class="fs-5 text-white mb-4 pb-2" data-i18n="carousel.text2">
-                    Explora el fascinante mundo del idioma español. Desde
-                    principiantes hasta avanzados, ofrecemos lecciones diseñadas
-                    para ti. Sumérgete en la cultura latinoamericana y desata tu
-                    potencial lingüístico.
+                            <p class="fs-5 text-white mb-3" data-i18n="carousel.text">
+                                Clases personalizadas con un profesor nativo. Mejora tus habilidades lingüísticas con actividades atractivas y ejercicios interactivos.
                   </p>
-                  <p class="fs-5 text-white mb-4 pb-2">
-                    <strong>
-                      ¡Habla, lee y escucha de una manera divertida y
-                      efectiva!</strong
-                    >
-                  </p>
-                  <a
-                    href="about.html"
-                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    >Más info</a
-                  >
-                  <a
-                    href="contact.html"
-                    class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    >Únete ahora</a
-                  >
-                </div>
+                  <p class="fs-5 text-white mb-4">
+                                <strong data-i18n="carousel.highlight">
+                                    ¡Aprende español con un profesor experto desde cualquier lugar del mundo!
+                                </strong>
+                            </p>
+                            <a href="about.html" class="btn btn-primary py-md-2 px-md-4 me-3 animated fadeIn" data-i18n="carousel.button1">
+                                Más info
+                            </a>
+                            <a href="contact.html" class="btn btn-light py-md-2 px-md-4 animated fadeIn" data-i18n="carousel.button2">
+                                Únete ahora
+                            </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Banner End -->
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
@@ -480,6 +450,35 @@
       </div>
     </div>
 
+    <!-- Social Media Section -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="social.title">Sígueme</h6>
+                <h1 class="mb-5" data-i18n="social.heading">Conectemos en redes sociales</h1>
+                <p class="mb-4" data-i18n="social.description">Sigue mis redes sociales para obtener consejos diarios, ejercicios gratuitos y estar al día con las novedades.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="social-large-buttons">
+                        <a href="https://www.instagram.com/aprendeconcarlos" target="_blank" class="btn btn-lg btn-outline-primary m-2">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/aprendeespaniolconcarlos" target="_blank" class="btn btn-lg btn-outline-primary m-2">
+                            <i class="fab fa-facebook-f me-2"></i> Facebook
+                        </a>
+                        <a href="https://www.tiktok.com/aprendeconcarlos" target="_blank" class="btn btn-lg btn-outline-primary m-2">
+                            <i class="fab fa-tiktok me-2"></i> TikTok
+                        </a>
+                        <a href="mailto:profereges@gmail.com" class="btn btn-lg btn-outline-primary m-2">
+                            <i class="fa fa-envelope me-2"></i> Email
+                        </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Contact Start -->
     <div class="container-xxl py-5">
       <div class="container">
@@ -649,5 +648,15 @@
     <script src="js/main.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/theme-clean.js"></script>
+    <script src="js/error-handler.js"></script>
+
+    <!-- Google Analytics (sustituye UA-XXXXX-Y con tu ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </body>
 </html>

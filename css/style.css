@@ -1726,3 +1726,63 @@ body.dark-mode .footer-menu a {
 body.dark-mode .footer-menu a:hover {
     color: #ffffff !important;
 }
+
+/* Social media buttons styling */
+.social-large-buttons .btn {
+    transition: all 0.3s;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.social-large-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .social-large-buttons .btn {
+    background-color: #2d3436;
+    color: #f0f0f0;
+    border-color: #4a69bd;
+}
+
+.dark-mode .social-large-buttons .btn:hover {
+    background-color: #4a69bd;
+    color: #ffffff;
+}
+
+/* Banner styles */
+.banner-container {
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.banner-container img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.banner-container:hover img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        max-height: 400px;
+    }
+    
+    .banner-container h1 {
+        font-size: 2rem;
+    }
+    
+    .banner-container p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilo para el botón "Únete ahora" en la barra de navegación */
+.navbar .btn-primary {
+    font-size: 1.25rem;
+    font-weight: 600;
+}

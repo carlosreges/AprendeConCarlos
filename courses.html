@@ -3,11 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Aprende con Carlos</title>
+    <title>Cursos de Español para Todos los Niveles | Aprende con Carlos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
+    <meta content="cursos de español, español online, clases de español, español para principiantes, español intermedio, español avanzado, español para negocios, aprender español, profesor nativo, clases personalizadas" name="keywords">
+    <meta content="Descubre nuestros cursos de español personalizados para todos los niveles. Desde principiantes hasta avanzados, incluyendo español para negocios. Aprende con un profesor nativo en clases diseñadas para tus necesidades específicas." name="description">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aprendeconcarlos.com/courses.html">
+    <meta property="og:title" content="Cursos de Español para Todos los Niveles | Aprende con Carlos">
+    <meta property="og:description" content="Cursos personalizados de español con un profesor nativo. Mejora tu fluidez con clases adaptadas a tus necesidades.">
+    <meta property="og:image" content="https://aprendeconcarlos.com/img/og-image-courses.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aprendeconcarlos.com/courses.html">
+    <meta property="twitter:title" content="Cursos de Español para Todos los Niveles | Aprende con Carlos">
+    <meta property="twitter:description" content="Cursos personalizados de español con un profesor nativo. Mejora tu fluidez con clases adaptadas a tus necesidades.">
+    <meta property="twitter:image" content="https://aprendeconcarlos.com/img/og-image-courses.jpg">
+    
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon">
 
@@ -65,7 +79,9 @@
             </div>
             <a href="contact.html" class="nav-item nav-link" data-i18n="nav.contact">Contacto</a>
         </div>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join">Únete ahora<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" data-i18n="nav.join" style="font-size: 1.25rem; font-weight: 600;">
+            Únete ahora<i class="fa fa-arrow-right ms-3"></i>
+        </a>
     </div>
 </nav>
 <!-- Navbar End -->
@@ -76,12 +92,11 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Courses</h1>
+                    <h1 class="display-3 text-white animated slideInDown" data-i18n="courses.pageTitle">Cursos</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html" data-i18n="nav.home">Inicio</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page" data-i18n="courses.pageTitle">Cursos</li>
                         </ol>
                     </nav>
                 </div>
@@ -102,47 +117,47 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
+                            <a class="position-relative d-block overflow-hidden" href="#">
                                 <img class="img-fluid" src="img/spanish-basic.jpg" alt="Español básico">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0" data-i18n="categories.basic">Español Básico</h5>
-                                    <small class="text-primary">4 Cursos</small>
+                                    <small class="text-primary" data-i18n="categories.basicCount">4 Cursos</small>
                                 </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                            <a class="position-relative d-block overflow-hidden" href="#">
+                                <img class="img-fluid" src="img/spanish-intermediate.jpg" alt="Español intermedio">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0" data-i18n="categories.intermediate">Español Intermedio</h5>
+                                    <small class="text-primary" data-i18n="categories.intermediateCount">3 Cursos</small>
                                 </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                            <a class="position-relative d-block overflow-hidden" href="#">
+                                <img class="img-fluid" src="img/spanish-business.jpg" alt="Español para negocios">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0" data-i18n="categories.business">Español para Negocios</h5>
+                                    <small class="text-primary" data-i18n="categories.businessCount">2 Cursos</small>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="#">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/spanish-advanced.jpg" alt="Español avanzado" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
+                            <h5 class="m-0" data-i18n="categories.advanced">Español Avanzado</h5>
+                            <small class="text-primary" data-i18n="categories.advancedCount">3 Cursos</small>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Categories Start -->
+    <!-- Categories End -->
 
 
     <!-- Courses Start -->
@@ -158,69 +173,58 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="img/spanish-conversation.jpg" alt="Conversación en español">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" data-i18n="courses.readMore">Leer Más</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" data-i18n="courses.joinNow">Únete Ahora</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;" data-i18n="courses.readMore">Leer Más</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;" data-i18n="courses.joinNow">Únete Ahora</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">$99.00</h3>
                             <h5 class="mb-4" data-i18n="courses.conversation">Curso de Conversación en Español</h5>
                         </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>12 <span data-i18n="courses.hours">Horas</span></small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>15 <span data-i18n="courses.students">Estudiantes</span></small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid" src="img/spanish-grammar.jpg" alt="Gramática española">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;" data-i18n="courses.readMore">Leer Más</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;" data-i18n="courses.joinNow">Únete Ahora</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                            <h3 class="mb-0">$129.00</h3>
+                            <h5 class="mb-4" data-i18n="courses.grammar">Gramática Española desde Cero</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>16 <span data-i18n="courses.hours">Horas</span></small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>20 <span data-i18n="courses.students">Estudiantes</span></small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-3.jpg" alt="">
+                            <img class="img-fluid" src="img/spanish-business-course.jpg" alt="Español para negocios">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;" data-i18n="courses.readMore">Leer Más</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;" data-i18n="courses.joinNow">Únete Ahora</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                            <h5 class="mb-4" data-i18n="courses.business">Español para Negocios y Profesionales</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Carlos Reges</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>14 <span data-i18n="courses.hours">Horas</span></small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>12 <span data-i18n="courses.students">Estudiantes</span></small>
                         </div>
                     </div>
                 </div>
@@ -230,78 +234,85 @@
     <!-- Courses End -->
 
 
-    <!-- Reemplazamos la sección de testimonios con FAQ -->
+    <!-- FAQ Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3" data-i18n="faq.title">Preguntas Frecuentes</h6>
                 <h1 class="mb-5" data-i18n="faq.heading">¿Dudas sobre nuestros cursos?</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-8">
                     <div class="accordion" id="faqAccordion">
-                        <!-- Preguntas frecuentes aquí -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1" data-i18n="faq.question1">
+                                    ¿Cómo son las clases y cuánto duran?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="faq.answer1">
+                                    Las clases son personalizadas y adaptadas a tus necesidades. Normalmente duran 60 minutos y se realizan a través de plataformas como Zoom o Google Meet. La frecuencia puede ser de 1 a 3 veces por semana, según tu disponibilidad y objetivos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" data-i18n="faq.question2">
+                                    ¿Necesito material específico para las clases?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="faq.answer2">
+                                    No es necesario que compres material adicional. Proporciono todos los recursos necesarios: presentaciones, ejercicios, documentos PDF y actividades interactivas que se adaptan a tu nivel y objetivos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" data-i18n="faq.question3">
+                                    ¿Cómo se realizan los pagos?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="faq.answer3">
+                                    Los pagos se realizan mensualmente por adelantado a través de transferencia bancaria, PayPal o Wise. Ofrezco descuentos para paquetes de clases y pagos trimestrales.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- FAQ End -->
 
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                <!-- Primera columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.links">Enlaces importantes</h4>
+                    <a class="btn btn-link" href="/blog.html">Blog</a>
+                    <a class="btn btn-link" href="https://www.fundeu.es/" target="_blank">Fundeú</a>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/aprendeconcarlos" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/aprendeespaniolconcarlos" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/aprendeconcarlos" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:profereges@gmail.com"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                <!-- Segunda columna -->
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3" data-i18n="footer.contact">Contacto</h4>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>Córdoba, Argentina
+                    </p>
+                    <p class="mb-2" data-i18n="footer.inquiry">
+                        Para consultas, por favor utiliza el formulario de contacto arriba.
+                    </p>
                 </div>
             </div>
         </div>
@@ -309,18 +320,15 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                        &copy; <a class="border-bottom" href="#">Aprende con Carlos</a>
+                        <span data-i18n="footer.rights">Todos los derechos reservados</span>.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.html" data-i18n="nav.home">Home</a>
+                            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+                            <a href="help.html" data-i18n="footer.help">Ayuda</a>
+                            <a href="faqs.html" data-i18n="footer.faqs">FAQs</a>
                         </div>
                     </div>
                 </div>
@@ -344,97 +352,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <!-- Crear una función de verificación visual -->
-    <script>
-    function checkVisualConsistency() {
-        const pages = ['index.html', 'about.html', 'contact.html'];
-        const elements = {
-            'back-to-top': {
-                position: 'fixed',
-                right: '30px',
-                bottom: '30px'
-            },
-            'navbar': {
-                logo: true,
-                navigation: true,
-                languageSelector: true
-            },
-            'footer': {
-                links: true,
-                social: true,
-                copyright: true
-            }
-        };
-        
-        console.log('🔍 Iniciando verificación visual...');
-        pages.forEach(page => {
-            console.log(`\n📄 Verificando ${page}:`);
-            console.log('- Botón back-to-top ✓');
-            console.log('- Navbar completa ✓');
-            console.log('- Footer consistente ✓');
-        });
-    }
-    </script>
-
-    <!-- Crear una función de verificación funcional -->
-    <script>
-    function checkFunctionality() {
-        console.log('\n⚙️ Verificando funcionalidades:');
-        
-        // Verificar scroll
-        window.addEventListener('scroll', () => {
-            const backToTop = document.querySelector('.back-to-top');
-            console.log('Scroll detectado:', backToTop.classList.contains('active') ? 'Botón visible' : 'Botón oculto');
-        });
-        
-        // Verificar click en back-to-top
-        document.querySelector('.back-to-top').addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log('Click en back-to-top: Scrolling hacia arriba');
-        });
-        
-        // Verificar cambio de idiomas
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', () => {
-                console.log('Cambio de idioma detectado');
-            });
-        });
-    }
-    </script>
-
-    <!-- Crear una función de verificación responsive -->
-    <script>
-    function checkResponsiveness() {
-        console.log('\n📱 Verificando responsividad:');
-        const breakpoints = [
-            {width: 320, device: 'Mobile S'},
-            {width: 375, device: 'Mobile M'},
-            {width: 425, device: 'Mobile L'},
-            {width: 768, device: 'Tablet'},
-            {width: 1024, device: 'Laptop'},
-            {width: 1440, device: 'Desktop'}
-        ];
-        
-        breakpoints.forEach(point => {
-            console.log(`Verificando en ${point.device} (${point.width}px) ✓`);
-        });
-    }
-    </script>
-
-    <!-- Ejecutar todas las verificaciones -->
-    <script>
-    function runFullCheck() {
-        console.clear();
-        console.log('🚀 Iniciando verificación completa...');
-        checkVisualConsistency();
-        checkFunctionality();
-        checkResponsiveness();
-        console.log('\n✨ Verificación completada!');
-    }
-
-    runFullCheck();
-    </script>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-clean.js"></script>
+    <script src="js/error-handler.js"></script>
 </body>
 
 </html>
