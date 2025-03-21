@@ -1,7 +1,11 @@
+# robots.txt para Aprende con Carlos
 User-agent: *
 Allow: /
-Sitemap: https://aprendeconcarlos.com.ar/sitemap.xml
 
-# Evitar que indexen páginas duplicadas o no necesarias
+# Evitar indexación de páginas no públicas
 Disallow: /404.html
-Disallow: /cookies.html 
+Disallow: /cookies.html
+Disallow: /help.html
+
+# Localización del sitemap
+Sitemap: https://aprendeconcarlos.com.ar/sitemap.xml 
