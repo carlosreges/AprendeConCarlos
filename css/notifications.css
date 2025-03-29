@@ -1,0 +1,51 @@
+.notification {
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(0);
+  max-width: 350px;
+}
+
+.notification.visible {
+  transform: translateY(-120px);
+  opacity: 1;
+}
+
+.notification.success {
+  border-left: 4px solid #28a745;
+}
+
+.notification.error {
+  border-left: 4px solid #dc3545;
+}
+
+.notification p {
+  margin: 0;
+  padding-right: 15px;
+}
+
+.close-notification {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+@media (max-width: 576px) {
+  .notification {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+} 

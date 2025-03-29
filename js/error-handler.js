@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Verificar que las traducciones existen para todos los elementos con data-i18n
-    if (typeof translations !== 'undefined') {
-        const currentLang = localStorage.getItem('language') || 'es';
+    if (typeof window.translations !== 'undefined') {
+        const currentLang = localStorage.getItem('selectedLanguage') || 'es';
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             
-            if (!translations[currentLang] || !translations[currentLang][key]) {
+            if (!window.translations[currentLang] || !window.translations[currentLang][key]) {
                 console.warn(`⚠️ Falta traducción para "${key}" en idioma "${currentLang}"`);
             }
         });

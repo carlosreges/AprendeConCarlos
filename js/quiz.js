@@ -19,6 +19,9 @@ class Quiz {
         
         this.hideLoadingElements();
         this.debug(`Loaded ${this.questions.length} questions`);
+
+        // Recuperar progreso si existe
+        this.loadSavedProgress();
     }
 
     hideLoadingElements() {
@@ -44,6 +47,42 @@ class Quiz {
         this.displayQuestion();
         this.setupEventListeners();
         this.startTimer();
+
+        // Agregar al inicio del quiz, después de cargar
+        if (localStorage.getItem('quizProgress')) {
+            // Mostrar diálogo de recuperación
+            const modal = document.createElement('div');
+            modal.className = 'modal fade show';
+            modal.style.display = 'block';
+            modal.innerHTML = `
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">¿Continuar quiz anterior?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Hemos detectado que tienes un quiz sin terminar. ¿Deseas continuar donde lo dejaste?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="resumeQuiz" class="btn btn-primary">Continuar</button>
+                            <button id="newQuiz" class="btn btn-secondary">Empezar nuevo</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            document.getElementById('resumeQuiz').addEventListener('click', () => {
+                document.body.removeChild(modal);
+                this.displayQuestion();
+            });
+            
+            document.getElementById('newQuiz').addEventListener('click', () => {
+                localStorage.removeItem('quizProgress');
+                document.body.removeChild(modal);
+                this.retakeQuiz();
+            });
+        }
     }
 
     setupEventListeners() {
@@ -788,6 +827,29 @@ class Quiz {
         } catch(e) {
             console.log("No se pudo reproducir el sonido de advertencia");
         }
+    }
+
+    // Cargar progreso guardado
+    loadSavedProgress() {
+        const savedProgress = localStorage.getItem('quizProgress');
+        if (savedProgress) {
+            try {
+                const progress = JSON.parse(savedProgress);
+                this.currentQuestion = progress.currentQuestion || 0;
+                this.score = progress.score || 0;
+                this.userAnswers = progress.userAnswers || [];
+                
+                // Asegurar que tenemos suficientes lotes cargados
+                const batchesNeeded = Math.ceil((this.currentQuestion + 3) / this.batchSize);
+                this.currentBatch = batchesNeeded;
+                
+                return true;
+            } catch (e) {
+                console.error('Error al cargar progreso guardado:', e);
+                return false;
+            }
+        }
+        return false;
     }
 }
 

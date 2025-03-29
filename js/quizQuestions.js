@@ -359,149 +359,48 @@ window.quizQuestions = [
     }
 ]; 
 
-// Función para verificar y corregir rutas de imágenes
-function fixImagePaths() {
+// Función única para verificar y corregir rutas de recursos (imágenes/audio)
+function verifyAndFixResources() {
     if (!window.quizQuestions) return;
     
-    console.log("🖼️ Verificando rutas de imágenes en preguntas...");
+    console.log("🔄 Verificando recursos de preguntas...");
     
     window.quizQuestions.forEach((question, index) => {
-        // Si la pregunta tiene una imagen
+        // Procesar imágenes
         if (question.image) {
-            // Si la ruta comienza con "path/to/"
-            if (question.image.startsWith('path/to/')) {
-                // Extraer el nombre del archivo
+            // Normalizar ruta de imagen
+            if (!question.image.startsWith('img/quiz/')) {
                 const fileName = question.image.split('/').pop();
-                
-                // Crear una ruta correcta (asumiendo que están en img/quiz/)
-                const correctPath = `img/quiz/${fileName}`;
-                
-                console.log(`🔄 Corrigiendo ruta de imagen en pregunta ${index+1}: 
-                    ${question.image} -> ${correctPath}`);
-                
-                // Actualizar la ruta
-                question.image = correctPath;
+                question.image = `img/quiz/${fileName}`;
+                console.log(`🖼️ Corrigiendo ruta de imagen en pregunta ${index+1}: ${question.image}`);
             }
             
-            // Verificar si la imagen existe (solo como información)
-            const img = new Image();
-            img.onload = () => console.log(`✅ Imagen encontrada: ${question.image}`);
-            img.onerror = () => console.warn(`⚠️ Imagen no encontrada: ${question.image}`);
-            img.src = question.image;
-        }
-        
-        // Lo mismo para archivos de audio
-        if (question.audio && question.audio.startsWith('path/to/')) {
-            const fileName = question.audio.split('/').pop();
-            const correctPath = `audio/quiz/${fileName}`;
-            
-            console.log(`🔄 Corrigiendo ruta de audio en pregunta ${index+1}: 
-                ${question.audio} -> ${correctPath}`);
-            
-            question.audio = correctPath;
-        }
-    });
-    
-    console.log("✅ Verificación de rutas completada");
-}
-
-// Ejecutar la corrección de rutas cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', fixImagePaths);
-
-// Función específica para arreglar las imágenes problemáticas
-function fixSpecificImages() {
-    if (!window.quizQuestions) return;
-    
-    // Mapeo de rutas problemáticas a rutas correctas
-    const imageMapping = {
-        'img/quiz/airport.png': 'img/quiz/airport.png',
-        'img/quiz/tourists.png': 'img/quiz/tourists.png',
-        'img/quiz/train.png': 'img/quiz/train.png',
-        'img/quiz/cat.png': 'img/quiz/cat.png'
-    };
-    
-    // Corregir rutas de imágenes específicas
-    window.quizQuestions.forEach((question, index) => {
-        if (question.image && imageMapping[question.image]) {
-            console.log(`🔄 Corrigiendo imagen específica en pregunta ${index+1}:
-                ${question.image} -> ${imageMapping[question.image]}`);
-            question.image = imageMapping[question.image];
-        }
-    });
-    
-    // También crear un respaldo para imágenes que no existan
-    window.quizQuestions.forEach((question, index) => {
-        if (question.image) {
             // Verificar si la imagen existe
             const img = new Image();
-            img.onload = () => console.log(`✅ Imagen cargada correctamente: ${question.image}`);
             img.onerror = () => {
-                console.warn(`⚠️ Imagen no encontrada: ${question.image}, usando imagen de respaldo`);
-                // Si la imagen no existe, usar una imagen de respaldo
+                console.warn(`⚠️ Imagen no encontrada: ${question.image}, usando respaldo`);
+                question.originalImage = question.image; // Guardar la original por si acaso
                 question.image = 'img/quiz/placeholder.jpg';
-                // También agregar texto alternativo
-                question.imageAlt = `Imagen no disponible para la pregunta ${index+1}`;
             };
             img.src = question.image;
         }
-    });
-}
-
-// Llamar a esta función al cargar la página
-document.addEventListener('DOMContentLoaded', fixSpecificImages);
-
-// Función para corregir las imágenes faltantes
-function fixMissingImages() {
-    console.log("🖼️ Corrigiendo imágenes faltantes...");
-    
-    // Asegurarnos de que las preguntas están cargadas
-    if (!window.quizQuestions || !Array.isArray(window.quizQuestions)) {
-        console.error("❌ No se encontraron las preguntas");
-        return;
-    }
-    
-    // Corregir específicamente las preguntas 8, 9, 10 y 11 (índices 7, 8, 9 y 10)
-    const problemQuestions = [7, 8, 9, 10];
-    
-    problemQuestions.forEach(index => {
-        if (index < window.quizQuestions.length) {
-            const question = window.quizQuestions[index];
-            
-            // Solo procesar si tiene una imagen
-            if (question.image) {
-                // Obtener nombre de archivo de la ruta actual
-                const filename = question.image.split('/').pop();
-                
-                // Crear nueva ruta en la carpeta correcta
-                const newPath = `img/quiz/${filename}`;
-                
-                console.log(`🔄 Pregunta ${index + 1}: Cambiando ${question.image} a ${newPath}`);
-                question.image = newPath;
-                
-                // También agregar un respaldo por si la imagen sigue sin cargar
-                question.originalImage = question.image;
-                question.backupImage = 'img/quiz/placeholder.jpg';
+        
+        // Procesar audio
+        if (question.audio) {
+            // Normalizar ruta de audio
+            if (!question.audio.startsWith('audio/quiz/')) {
+                const fileName = question.audio.split('/').pop();
+                question.audio = `audio/quiz/${fileName}`;
+                console.log(`🔊 Corrigiendo ruta de audio en pregunta ${index+1}: ${question.audio}`);
             }
+            
+            // No podemos verificar fácilmente si el audio existe como con las imágenes
+            // Pero podemos preparar un plan de respaldo para el reproductor
         }
     });
     
-    // Modificar la forma en que se muestra la imagen para usar un respaldo
-    modifyDisplayQuestionMethod();
-    
-    console.log("✅ Corrección de imágenes completada");
-}
-
-// Función para modificar el método displayQuestion de la clase Quiz
-function modifyDisplayQuestionMethod() {
-    if (!window.Quiz || !window.Quiz.prototype) {
-        console.error("❌ No se pudo acceder a la clase Quiz");
-        return;
-    }
-    
-    // Guardar referencia al método original
-    const originalCreateImageContainer = window.Quiz.prototype.createImageContainer;
-    
-    // Reemplazar con nuestra versión mejorada
+    // Modificar el método que muestra imágenes para usar respaldo si falla
+    if (window.Quiz && window.Quiz.prototype) {
     window.Quiz.prototype.createImageContainer = function(question) {
         if (!question.image) return '';
         
@@ -512,31 +411,31 @@ function modifyDisplayQuestionMethod() {
                      class="img-fluid rounded"
                      style="max-height: 300px;"
                      onerror="this.onerror=null; this.src='img/quiz/placeholder.jpg'; 
-                             this.style.border='2px dashed #dc3545'; 
                              this.parentNode.innerHTML += '<p class=\\'text-danger mt-2\\'>Imagen no disponible</p>';">
             </div>
         `;
     };
     
-    console.log("✓ Método createImageContainer modificado para manejar imágenes faltantes");
+        // También modificar el método que maneja los audios para incluir respaldo
+        const originalCreateAudioElement = window.Quiz.prototype.createAudioElement;
+        window.Quiz.prototype.createAudioElement = function(question) {
+            if (!question.audio) return '';
+            
+            return `
+                <div class="audio-container mb-4">
+                    <audio controls class="w-100" onError="this.outerHTML='<div class=\\'alert alert-warning\\'>Audio no disponible</div>'">
+                        <source src="${question.audio}" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            `;
+        };
+    }
+    
+    console.log("✅ Verificación de recursos completada");
 }
 
-// Ejecutar cuando el DOM esté listo
+// Ejecutar una sola vez cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    // Dar tiempo para que se carguen todas las dependencias
-    setTimeout(fixMissingImages, 500);
-    
-    // También comprobar periódicamente el botón de envío
-    setInterval(function() {
-        const quizIntro = document.getElementById('quizIntro');
-        const submitContainer = document.getElementById('submitContainer');
-        
-        if (quizIntro && submitContainer) {
-            const isIntroVisible = window.getComputedStyle(quizIntro).display !== 'none';
-            
-            if (isIntroVisible) {
-                submitContainer.style.display = 'none';
-            }
-        }
-    }, 1000);
+    setTimeout(verifyAndFixResources, 500); // Un pequeño retraso para asegurar que todo está cargado
 }); 

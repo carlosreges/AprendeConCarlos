@@ -71,51 +71,55 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: true,
-        autoplayTimeout: 7000,
-        autoplaySpeed: 2000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        items: 1,
-        dots: true,
-        loop: true,
-        nav: false,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
-        onInitialized: function() {
-            console.log('¡Carrusel listo para girar! 🎠');
-        },
-        onTranslated: function() {
-            $('.owl-dot.active').addClass('bounce');
-            setTimeout(function() {
-                $('.owl-dot.active').removeClass('bounce');
-            }, 200);
-        }
-    });
+    if (document.querySelector(".header-carousel")) {
+        $(".header-carousel").owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 7000,
+            autoplaySpeed: 2000,
+            autoplayHoverPause: true,
+            smartSpeed: 1500,
+            items: 1,
+            dots: true,
+            loop: true,
+            nav: false,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+            onInitialized: function() {
+                console.log('¡Carrusel listo para girar! 🎠');
+            },
+            onTranslated: function() {
+                $('.owl-dot.active').addClass('bounce');
+                setTimeout(function() {
+                    $('.owl-dot.active').removeClass('bounce');
+                }, 200);
+            }
+        });
+    }
 
 
     // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        margin: 24,
-        dots: true,
-        loop: true,
-        nav : false,
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
+    if (document.querySelector(".testimonial-carousel")) {
+        $(".testimonial-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            center: true,
+            margin: 24,
+            dots: true,
+            loop: true,
+            nav : false,
+            responsive: {
+                0:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                }
             }
-        }
-    });
+        });
+    }
     
     // Smooth scroll para los enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -137,31 +141,38 @@
         }
     });
 
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true
-    });
+    if (document.querySelector('.owl-carousel')) {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true
+        });
+    }
 
     // Manejo del formulario de contacto
-    const contactForm = document.querySelector('form');
+    const contactForm = document.querySelector('form.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Aquí iría la lógica de envío
             const button = this.querySelector('button[type="submit"]');
-            button.innerHTML = '<i class="fas fa-check"></i> ' + (localStorage.getItem('selectedLanguage') === 'en' ? 'Sent!' : localStorage.getItem('selectedLanguage') === 'pt' ? 'Enviado!' : '¡Enviado!');
-            button.classList.add('success');
-            
-            // Resetear después de 3 segundos
-            setTimeout(() => {
-                button.innerHTML = translations[localStorage.getItem('selectedLanguage') || 'es']['contact.send'];
-                button.classList.remove('success');
-                this.reset();
-            }, 3000);
+            if (button) {
+                button.innerHTML = '<i class="fas fa-check"></i> ' + (localStorage.getItem('selectedLanguage') === 'en' ? 'Sent!' : localStorage.getItem('selectedLanguage') === 'pt' ? 'Enviado!' : '¡Enviado!');
+                button.classList.add('success');
+                
+                // Resetear después de 3 segundos
+                setTimeout(() => {
+                    const translations = window.translations || {};
+                    const lang = localStorage.getItem('selectedLanguage') || 'es';
+                    const translationObj = translations[lang] || {};
+                    button.innerHTML = translationObj['contact.send'] || 'Enviar';
+                    button.classList.remove('success');
+                    this.reset();
+                }, 3000);
+            }
         });
     }
 
@@ -229,5 +240,37 @@
         
         // Eliminamos cualquier referencia al spinner
         // Código seguro que no intenta acceder a elementos que podrían no existir
+    });
+
+    // Marcar enlace activo en el menú
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener la URL actual
+        const currentLocation = window.location.href;
+        
+        // Obtener todos los enlaces del menú
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        // Comparar cada enlace con la URL actual
+        navLinks.forEach(link => {
+            // Si el enlace está en la URL actual
+            if (currentLocation.includes(link.getAttribute('href')) && 
+                link.getAttribute('href') !== '#' && 
+                link.getAttribute('href') !== '' &&
+                link.getAttribute('href').length > 1) {
+                
+                // Añadir la clase active
+                link.classList.add('active');
+            }
+        });
+        
+        // Si estamos en la página principal, marcar "Home" como activo
+        if (currentLocation.endsWith('/') || 
+            currentLocation.endsWith('/index.html') || 
+            currentLocation === window.location.origin + '/') {
+            const homeLink = document.querySelector('.navbar-nav .nav-link[href="index.html"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+            }
+        }
     });
 })(jQuery);

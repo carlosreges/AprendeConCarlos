@@ -1,5 +1,5 @@
 // Objeto con todas las traducciones
-const translations = {
+window.translations = {
     es: {
         // Navegación
         "nav.home": "Inicio",
@@ -331,42 +331,47 @@ const translations = {
 
 // Función para aplicar traducciones
 function applyTranslations(lang) {
+    // Aplicar traducciones a elementos con atributo data-i18n
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
+        if (window.translations[lang] && window.translations[lang][key]) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
+                element.placeholder = window.translations[lang][key];
             } else {
-                element.innerHTML = translations[lang][key];
+                element.innerHTML = window.translations[lang][key];
             }
         } else {
-            console.warn(`⚠️ Falta traducción para "${key}" en idioma "${lang}"`);
+            console.warn(`No se encontró traducción para [${key}] en [${lang}]`);
         }
     });
 }
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
-    // Guarda el idioma seleccionado en localStorage
-    localStorage.setItem('language', lang);
+    // Guardar idioma seleccionado en almacenamiento local
+    localStorage.setItem('selectedLanguage', lang);
     
-    // Aplica las traducciones
+    // Aplicar traducciones
     applyTranslations(lang);
     
-    // Actualiza visualmente los botones de idioma
-    document.querySelectorAll('.language-option').forEach(option => {
-        if (option.getAttribute('data-lang') === lang) {
-            option.classList.add('active');
-        } else {
-            option.classList.remove('active');
+    // Actualizar apariencia de los botones de idioma
+    document.querySelectorAll('.language-option').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
         }
     });
+    
+    // Actualizar atributo lang del HTML
+    document.documentElement.lang = lang;
+    
+    console.log(`Idioma cambiado a: ${lang}`);
 }
 
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     // Obtén el idioma guardado o usa 'es' como predeterminado
-    const currentLang = localStorage.getItem('language') || 'es';
+    const currentLang = localStorage.getItem('selectedLanguage') || 'es';
     
     // Aplica las traducciones al cargar la página
     applyTranslations(currentLang);

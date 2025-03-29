@@ -562,3 +562,54 @@ iconify-icon.quote {
 .rate {
   color: var(--accent-color);
 }
+
+:root {
+  --primary-color: #0d6efd;      /* Color principal para botones y acentos */
+  --primary-dark: #0b5ed7;       /* Versión oscura del color principal */
+  --secondary-color: #f8f9fa;    /* Color secundario para fondos alternos */
+  --text-dark: #212529;          /* Color texto principal */
+  --text-light: #6c757d;         /* Color texto secundario */
+  --border-color: #dee2e6;       /* Color para bordes */
+  --success-color: #28a745;      /* Color para mensajes de éxito */
+  --white: #ffffff;              /* Blanco para fondos y textos en dark mode */
+}
+
+/* Estilos para las tarjetas de cursos */
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-icon {
+  color: var(--primary-color);
+}
+
+.course-features {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-features li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border-color);
+  position: relative;
+  padding-left: 25px;
+}
+
+.course-features li:before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.course-features li:last-child {
+  border-bottom: none;
+}

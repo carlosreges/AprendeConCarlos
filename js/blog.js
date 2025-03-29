@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicialización de la búsqueda
     initializeSearch();
+    
+    // Inicialización del podcast
+    initializePodcast();
 });
 
 /**
@@ -119,6 +122,44 @@ function initializeSearch() {
         // Por ahora, solo mostramos un mensaje
         alert('Buscando: ' + searchTerm);
     });
+}
+
+/**
+ * Inicializa la funcionalidad del podcast
+ */
+function initializePodcast() {
+    const podcastContainer = document.querySelector('.podcast-container');
+    
+    if (!podcastContainer) return;
+    
+    // Agregar analytics para el podcast
+    const podcastLink = podcastContainer.querySelector('.btn-primary');
+    if (podcastLink) {
+        podcastLink.addEventListener('click', function() {
+            // Registrar evento de clic en el podcast
+            if (typeof gtag === 'function') {
+                gtag('event', 'podcast_visit', {
+                    'event_category': 'engagement',
+                    'event_label': 'Spotify Podcast Visit'
+                });
+            }
+        });
+    }
+    
+    // Agregar comportamiento a los enlaces de transcripción
+    const transcriptionLinks = document.querySelectorAll('a[href*="transcripcion-podcast"]');
+    if (transcriptionLinks.length > 0) {
+        transcriptionLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'transcription_view', {
+                        'event_category': 'content',
+                        'event_label': 'Podcast Transcription View'
+                    });
+                }
+            });
+        });
+    }
 }
 
 /**
