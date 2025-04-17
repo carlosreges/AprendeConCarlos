@@ -30,51 +30,51 @@ window.quizQuestions = [
         correct: 2
     },
     {
-        question: "¿Qué función cumple 'con cariño' en 'Escribió la carta con cariño'?",
+        question: "¿Qué piensas de la pelicula que _____ anoche?",
         options: [
-            "Sujeto",
-            "Complemento directo",
-            "Complemento circunstancial",
-            "Predicado"
+            "veíamos",
+            "veremos",
+            "veía",
+            "vimos"
         ],
         correct: 2
     },
     {
-        question: "¿Cuál es el modo verbal en 'Ojalá llueva mañana'?",
+        question: "No puedes salir ________ pues está lloviendo",
         options: [
-            "Indicativo",
-            "Subjuntivo",
-            "Imperativo",
-            "Condicional"
+            "hoy",
+            "mañana",
+            "ayer",
+            "anteayer"
         ],
         correct: 1
     },
     {
-        question: "Observa la imagen de la niña bailando. ¿Qué oración describe mejor la escena?",
+        question: "Observa la imagen. ¿Qué hace la niña?",
         image: "img/quiz/dance.png",
         options: [
-            "La niña está saltando en la sala",
-            "La niña está practicando sus pasos de baile en la sala",
+            "La niña está bailando en la sala",
+            "La niña está triste en la cocina",
             "La niña está haciendo ejercicio",
-            "La niña está jugando en la sala"
+            "La niña está jugando en su cuarto"
         ],
         correct: 1,
         category: "descripción_acciones"
     },
     {
-        question: "La chica con la cámara está sonriendo. ¿Qué expresión usarías para describir su estado de ánimo?",
+        question: "Observa la imagen. ¿Qué se muestra?",
         image: "img/quiz/camera.jpg",
         options: [
-            "Está que no cabe en sí de gozo",
-            "Está como pez en el agua",
-            "Está que se sube por las paredes",
-            "Está que echa chispas"
+            "La fotógrafa está sonriendo.",
+            "La fotógrafa está haciendo ejercicio.",
+            "La fotógrafa está cumpliendo años.",
+            "La fotógrafa no sabe que hacer."
         ],
         correct: 0,
         category: "expresiones_idiomáticas"
     },
     {
-        question: "En el aeropuerto, ¿qué situación refleja la imagen?",
+        question: "Observa la imagen. ¿Qué se muestra?",
         image: "img/quiz/airport.png",
         options: [
             "El pasajero está haciendo el check-in",
@@ -86,7 +86,7 @@ window.quizQuestions = [
         category: "situaciones_cotidianas"
     },
     {
-        question: "En el pueblo andino, los turistas probablemente están...",
+        question: "En este pueblo andino, los turistas están...",
         image: "img/quiz/tourists.png",
         options: [
             "Preguntando por direcciones al centro",
@@ -102,15 +102,15 @@ window.quizQuestions = [
         image: "img/quiz/train.png",
         options: [
             "Hay tres pasajeros en el vagón",
-            "Dos personas están despiertas",
+            "Todos están despiertos",
             "Uno de los pasajeros tiene un brazo enyesado",
-            "Un pasajero está leyendo"
+            "Un pasajero está leyendo un libro"
         ],
         correct: 1,
         category: "comprensión_detalles"
     },
     {
-        question: "Sobre la imagen del gato, elige la descripción que utiliza correctamente los marcadores espaciales:",
+        question: "Elige la descripción correcta:",
         image: "img/quiz/cat.png",
         options: [
             "El gato está acostado sobre la alfombra, entre la cama y el escritorio, mientras las lámparas iluminan el cuarto",
@@ -122,7 +122,7 @@ window.quizQuestions = [
         category: "uso_preposiciones"
     },
     {
-        question: "Selecciona la forma verbal correcta: 'Si yo _______ más tiempo, estudiaría otro idioma.'",
+        question: "Si yo _______ más tiempo, estudiaría otro idioma.",
         options: [
             "tendría",
             "tuviera",
@@ -144,7 +144,7 @@ window.quizQuestions = [
         category: "uso_preposiciones"
     },
     {
-        question: "¿Qué tiempo verbal es correcto? 'Cuando _______ a casa, me llamó mi hermana.'",
+        question: "Cuando _______ a casa, me llamó mi hermana.",
         options: [
             "llegué",
             "he llegado",
@@ -155,7 +155,7 @@ window.quizQuestions = [
         category: "tiempos_pasado"
     },
     {
-        question: "Selecciona el adverbio adecuado: 'El tren llegó _______ a la estación porque hubo un problema técnico.'",
+        question: "El tren llegó _______ a la estación porque hubo un problema técnico.",
         options: [
             "tarde",
             "tardes",
@@ -166,7 +166,7 @@ window.quizQuestions = [
         category: "uso_adverbios"
     },
     {
-        question: "Completa con el verbo en subjuntivo: 'Es necesario que _______ (tú) el formulario antes de viajar.'",
+        question: "Es necesario que (tú) _______ el formulario antes de viajar.",
         options: [
             "rellenas",
             "rellenarás",
@@ -177,7 +177,7 @@ window.quizQuestions = [
         category: "subjuntivo_presente"
     },
     {
-        question: "Elige la expresión temporal correcta: '_______ que empecé a aprender español, he hecho muchos amigos.'",
+        question: "_______ que empecé a aprender español, he hecho muchos amigos.'",
         options: [
             "Desde",
             "Hace",
@@ -188,7 +188,7 @@ window.quizQuestions = [
         category: "expresiones_temporales"
     },
     {
-        question: "Lee el siguiente diálogo y elige la opción que completa la conversación:\n- ¿Te importaría prestarme tus apuntes?\n- _______",
+        question: "Responde la conversación:\n- ¿Te importaría prestarme tus apuntes?\n- _______",
         options: [
             "No, para nada. Te los traigo mañana",
             "Sí, me importa mucho",
@@ -199,7 +199,7 @@ window.quizQuestions = [
         category: "cortesía_pragmática"
     },
     {
-        question: "¿Qué pronombre relativo completa correctamente la frase? 'La ciudad _____ vivo tiene un clima muy agradable.'",
+        question: "'La ciudad _____ vivo tiene un clima muy agradable.'",
         options: [
             "que",
             "donde",
@@ -210,10 +210,10 @@ window.quizQuestions = [
         category: "pronombres_relativos"
     },
     {
-        question: "Identifica el conector adecuado: 'No pude llegar temprano _______ había mucho tráfico.'",
+        question: "No pude llegar temprano _______ había mucho tráfico.'",
         options: [
-            "porque",
             "pero",
+            "porque",
             "sino",
             "aunque"
         ],
@@ -221,7 +221,7 @@ window.quizQuestions = [
         category: "conectores_discursivos"
     },
     {
-        question: "Selecciona la perífrasis verbal correcta: 'Mi hermana _______ estudiar medicina el próximo año.'",
+        question: "Mi hermana _______ estudiar medicina el próximo año.",
         options: [
             "va a",
             "está a",
@@ -232,10 +232,10 @@ window.quizQuestions = [
         category: "perífrasis_verbales"
     },
     {
-        question: "¿Qué opción expresa mejor probabilidad en presente? 'Son las 10 y Juan no ha llegado, _______.'",
+        question: "Son las 10:00 y Juan no ha llegado, ¿_______?",
         options: [
             "estará enfermo",
-            "está enfermo",
+            "estaba enfermo",
             "estuvo enfermo",
             "ha estado enfermo"
         ],
@@ -243,7 +243,7 @@ window.quizQuestions = [
         category: "expresión_probabilidad"
     },
     {
-        question: "Completa con el modo correcto: 'Te sugiero que _______ (ir) al médico.'",
+        question: "Te sugiero que _______ (ir) ahora al médico.",
         options: [
             "vas",
             "vayas",

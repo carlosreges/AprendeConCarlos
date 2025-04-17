@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFilters();
     
     // Inicialización del formulario de newsletter
-    initializeNewsletter();
+    initializeNewsletter(); 
     
     // Inicialización de la búsqueda
     initializeSearch();
